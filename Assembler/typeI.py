@@ -1,0 +1,23 @@
+typeI = {
+    'addi': { 'opcode': '000001', 'format': ['rt','rs','immediate'] },
+    'addiu': { 'opcode': '000010', 'format': ['rt', 'rs', 'immediate'] },
+    'lui': { 'opcode': '001010', 'format': ['rt','immediate'] },
+    'andi': { 'opcode': '010011', 'format': ['rt','rs','immediate'] },
+    'ori': { 'opcode': '010110', 'format': ['rt','rs','immediate'] },
+    'xori': { 'opcode': '011000', 'format': ['rt', 'rs', 'immediate'] },
+    'nandi': {'opcode': '011011', 'format': ['rt','rs', 'immediate'] },
+    'divi': { 'opcode': '011101', 'format': ['rs','immediate'] },
+    'muli': { 'opcode': '100100', 'format': ['rt','rs', 'immediate'] },
+    'bgez': { 'opcode': '101100', 'format': ['rs','immediate'] },
+    'bltz': { 'opcode': '101101', 'format': ['rs', 'immediate'] },
+    'beq': { 'opcode': '101110', 'format': ['rt','rs', 'immediate'] },
+    'bne': { 'opcode': '101111', 'format': ['rt','rs', 'immediate'] },
+    'lb': { 'opcode': '110100', 'format': ['rt','immediate', 'rs'] },
+    'lw': { 'opcode': '110101', 'format': ['rt','immediate','rs'] },
+    'sb': { 'opcode': '110110', 'format': ['rt','immediate','rs'] },
+    'sw': { 'opcode': '110111', 'format': ['rt','immediate','rs'] },
+    'lh': { 'opcode': '111000', 'format': ['rt','immediate','rs'] },
+    'sh': { 'opcode': '111001', 'format': ['rt','immediate','rs'] },
+    'slti': { 'opcode': '111101', 'format': ['rt','rs','immediate'] },
+    'sltiu': { 'opcode': '111110', 'format': ['rt','rs','immediate'] }
+    }
