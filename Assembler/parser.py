@@ -4,7 +4,6 @@ from typeI import typeI
 from registers import registers
 import re
 
-
 arc = open("Algoritmos/test.asm")
 line = arc.readline();
 
@@ -25,14 +24,32 @@ if [ line  is '.start']:
             if p !='' and p !="," and p != ".pseg":
                 lista.append(p)
         for p in lista:
-            print lista
+            print lista   #reconhecer o R como o i
             print p;
             p= p.strip()
-            if typeR.has_key(p):   # verifica se e o tipo R
-                binario += typeR[p]
 
-                print "e do tipo r"
 
+            if typeR.has_key(p):
+                print " entrou tipo R"
+                dicio = typeR[p]
+                binario += dicio['opcode']
+                i=0
+                for pa in lista[1:]:
+                    print pa
+                    print i
+                    print "aqui"
+                    if dicio['format'][i] == 'rt' or dicio['format'][i] == 'rs':
+                        if registers.has_key(pa):
+                            binario+= registers[pa]
+                            print " regi"
+                    if dicio['format'][i] == 'shift' :
+                        inteiro = int(pa)
+                        binario+=str('{0:016b}'.format(inteiro))
+                        print " imediato"
+                    i = i+1
+
+                    print binario
+                break
             elif typeI.has_key(p):
                 print " entrou tipo I"
                 dicio = typeI[p]
@@ -53,11 +70,8 @@ if [ line  is '.start']:
                     i = i+1
 
                     print binario
-                    break;
-            if registers.has_key(p):
-                print "registrador"
-                binario+= registers[p]
 
+                break;
 
 
             print binario
