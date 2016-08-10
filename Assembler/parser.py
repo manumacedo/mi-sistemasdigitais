@@ -10,7 +10,7 @@ line = arc.readline();
 
 if [ line  is '.start']:
     print "sim"
-    if [ arc.readline is ".pseg"]: # verificando se o programa segue as diretivas
+    if [ arc.readline is ".text"]: # verificando se o programa segue as diretivas
         print "ok2"
 
     for line in arc.readlines():   # lendo as linhas
@@ -21,12 +21,12 @@ if [ line  is '.start']:
         for p in palavra:
             p= p.strip()
 
-            if p !='' and p !="," and p != ".pseg":
+            if p !='' and p !="," and p != ".text":
                 lista.append(p)
         for p in lista:
             print lista   #reconhecer o R como o i
             print p;
-            p= p.strip()
+             #p= p.strip()
 
 
             if typeR.has_key(p):
