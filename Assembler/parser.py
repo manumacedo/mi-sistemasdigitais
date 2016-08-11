@@ -37,15 +37,16 @@ if [ line  is '.start']:
                 for pa in lista[1:]:
                     print pa
                     print i
-                    print "aqui"
-                    if dicio['format'][i] == 'rt' or dicio['format'][i] == 'rs':
+                    print "aqui tipo r"
+                    if dicio['format'][i] == 'rt' or dicio['format'][i] == 'rs' or dicio['format'][i] == 'rd':
                         if registers.has_key(pa):
                             binario+= registers[pa]
-                            print " regi"
+                            print "regi tipo r"
+                            print binario
                     if dicio['format'][i] == 'shift' :
                         inteiro = int(pa)
                         binario+=str('{0:016b}'.format(inteiro))
-                        print " imediato"
+                        print "shift"
                     i = i+1
 
                     print binario
@@ -58,20 +59,26 @@ if [ line  is '.start']:
                 for pa in lista[1:]:
                     print pa
                     print i
-                    print "aqui"
+                    print "aqui tipo i"
                     if dicio['format'][i] == 'rt' or dicio['format'][i] == 'rs':
                         if registers.has_key(pa):
                             binario+= registers[pa]
-                            print " regi"
+                            print "regi tipo i"
+                            print binario
                     if dicio['format'][i] == 'immediate' :
                         inteiro = int(pa)
                         binario+=str('{0:016b}'.format(inteiro))
-                        print " imediato"
+                        print "imediato"
                     i = i+1
 
                     print binario
-
                 break;
+##            elif typeJ.has_key(p):
+##            print "tipo J"
+##            dicio = typeJ[p]
+##            binario += dicio ['opcode']
+##            i=0
+
 
 
             print binario
