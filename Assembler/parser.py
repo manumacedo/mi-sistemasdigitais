@@ -4,6 +4,12 @@ from typeI import typeI
 from registers import registers
 import re
 
+def completar(bin):
+    tamanho = len(bin)
+    for i in range(tamanho,32):
+        bin += str(0)
+    return bin
+
 arc = open("Algoritmos/test.asm")
 line = arc.readline();
 
@@ -29,7 +35,7 @@ if [ line  is '.start']:
              #p= p.strip()
 
 
-            if typeR.has_key(p):
+            if typeR.has_key(p):  # Testando se e do tipo R
                 print " entrou tipo R"
                 dicio = typeR[p]
                 binario += dicio['opcode']
@@ -42,7 +48,7 @@ if [ line  is '.start']:
                         if registers.has_key(pa):
                             binario+= registers[pa]
                             print "regi tipo r"
-                            print binario
+                         #    print binario
                     if dicio['format'][i] == 'shift' :
                         inteiro = int(pa)
                         binario+=str('{0:016b}'.format(inteiro))
@@ -51,10 +57,10 @@ if [ line  is '.start']:
 
                     print binario
                 break
-            elif typeI.has_key(p):
+            elif typeI.has_key(p):  # Testando se e do tipo I
                 print " entrou tipo I"
                 dicio = typeI[p]
-                binario += dicio['opcode']
+                binario += dicio['opcode']  # adiciona o binario do opcode no binario final
                 i=0
                 for pa in lista[1:]:
                     print pa
@@ -67,22 +73,24 @@ if [ line  is '.start']:
                             print binario
                     if dicio['format'][i] == 'immediate' :
                         inteiro = int(pa)
-                        binario+=str('{0:016b}'.format(inteiro))
+                        binario+=str('{0:016b}'.format(inteiro)) #adicionario numero inteiro no binario final
                         print "imediato"
                     i = i+1
 
                     print binario
-                break;
-##            elif typeJ.has_key(p):
-##            print "tipo J"
-##            dicio = typeJ[p]
-##            binario += dicio ['opcode']
-##            i=0
+                break
+
+            elif typeJ.has_key(p):
+                print "tipo J"
+                dicio = typeJ[p]
+                binario += dicio ['opcode']
+                break
 
 
 
             print binario
-#        print resto[0].strip()
-
+        print "vai pro final"
+        binresult = completar(binario)  # completa o binario resultando da identificacao
+        print binresult
 else:
      print "Deu pau"

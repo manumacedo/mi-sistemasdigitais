@@ -1,5 +1,5 @@
 .start
-		.pseg
+		.text
 			li $t0, 2							;Registrador com a base
 			li $t1, 8							;Registrador com o expoente
 			li $t3, 1
