@@ -12,7 +12,7 @@ def completar(bin):
 
 arc = open("Algoritmos/test.asm")
 line = arc.readline();
-
+arc2 = open("resultado.txt","a")  # arquivo resultante
 
 if [ line  is '.start']:
     print "sim"
@@ -20,7 +20,7 @@ if [ line  is '.start']:
         print "ok2"
 
     for line in arc.readlines():   # lendo as linhas
-        binario=""
+        binario="0000000000000000000000000000000"
         lista =[]
         palavra = re.escape(line) # separando a linha para pegar o minemonic
         palavra = palavra.split("\\")
@@ -28,7 +28,7 @@ if [ line  is '.start']:
             p= p.strip()
 
             if p !='' and p !="," and p != ".text":
-                lista.append(p)
+                lista.append(p)  # criando uma lista somente com os programas
         for p in lista:
             print lista   #reconhecer o R como o i
             print p;
@@ -38,46 +38,51 @@ if [ line  is '.start']:
             if typeR.has_key(p):  # Testando se e do tipo R
                 print " entrou tipo R"
                 dicio = typeR[p]
-                binario += dicio['opcode']
+                binario = dicio['opcode'] + binario[6:31]
                 i=0
+
+
                 for pa in lista[1:]:
-                    print pa
-                    print i
                     print "aqui tipo r"
-                    if dicio['format'][i] == 'rt' or dicio['format'][i] == 'rs' or dicio['format'][i] == 'rd':
-                        if registers.has_key(pa):
-                            binario+= registers[pa]
-                            print "regi tipo r"
+                    if dicio['format'][i] == 'rs':
+                        binario = binario[0:6] +  registers[pa] + binario[11:31]
+                    if dicio['format'][i] == 'rt':
+                        binario = binario[0:11] + registers[pa] + binario[16:31]
+                    if dicio['format'][i] == 'rd':
+                        binario= binario [0:16] + registers[pa] +  binario[21:31]
                          #    print binario
                     if dicio['format'][i] == 'shift' :
                         inteiro = int(pa)
                         binario+=str('{0:016b}'.format(inteiro))
                         print "shift"
                     i = i+1
+                print binario + "aquicarai"
+                binario=  binario [0:21] + dicio["defaults"]["shift"] + dicio["funct"]
 
-                    print binario
+
+
                 break
+                opcode + rs + rt + imediato
             elif typeI.has_key(p):  # Testando se e do tipo I
                 print " entrou tipo I"
                 dicio = typeI[p]
-                binario += dicio['opcode']  # adiciona o binario do opcode no binario final
+                binario = dicio['opcode'] + binario[6:31] # adiciona o binario do opcode no binario final
                 i=0
                 for pa in lista[1:]:
-                    print pa
-                    print i
                     print "aqui tipo i"
-                    if dicio['format'][i] == 'rt' or dicio['format'][i] == 'rs':
-                        if registers.has_key(pa):
-                            binario+= registers[pa]
-                            print "regi tipo i"
-                            print binario
+                    if dicio['format'][i] == 'rs':
+                        binario = binario[0:6] + registers[pa] + binario[11:31]
+                    if dicio['format'][i] == 'rt':
+                        binario = binario[0:11] + registers[pa] +binario[16:31]
+
                     if dicio['format'][i] == 'immediate' :
                         inteiro = int(pa)
-                        binario+=str('{0:016b}'.format(inteiro)) #adicionario numero inteiro no binario final
-                        print "imediato"
+                        bina =str('{0:016b}'.format(inteiro)) #adicionario numero inteiro no binario final
+                        binario= binario [0:16] + bina
                     i = i+1
 
                     print binario
+
                 break
 
             elif typeJ.has_key(p):
@@ -87,10 +92,10 @@ if [ line  is '.start']:
                 break
 
 
+        arc2.write(binario+"\n")
 
-            print binario
         print "vai pro final"
-        binresult = completar(binario)  # completa o binario resultando da identificacao
-        print binresult
+
+
 else:
      print "Deu pau"
