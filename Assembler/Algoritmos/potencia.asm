@@ -2,8 +2,6 @@
 		 	li  $t0, 2							;Registrador com a base
 			li  $t1, 8							;Registrador com o expoente
 			li  $t3, 1
-			beq $t1, $zero, CONDITIONZERO
-			beq $t1, $t3, CONDITIONONE
 			move $t2, $zero						;Registrador contador de iterações
 			move $s0, $t0						;registrador de resultado
 		LOOP:

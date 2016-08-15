@@ -7,15 +7,15 @@ arc2 = open("result.asm","w")  # arquivo resultante
 diclabels = {}
 
 
-#parser = new parser()
 preprocesser = preprocesser()
 
 
 preprocesser.notcoment(arc,arc2) # retirando os comentarios
 arc2.close()   #fechando o arquivo depois de retirar os comentarios
-
-arc2 = open("result.asm")  #  reabrindo o arquivo resultante
-
+arc2 = open("result.asm")
 preprocesser.sizeText(arc2,diclabels)
-parser = parser()
-parser.run()
+arc2 = open("result.asm")  #  reabrindo o arquivo resultante
+preprocesser.removeLabel(arc2,diclabels)
+
+p = parser()
+p.run(diclabels)

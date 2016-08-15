@@ -18,11 +18,26 @@ class preprocesser:
                         print gp
                         label = line[:d].strip()
                         diclabels[label] = gp
+
                 print diclabels
                 return gp-1
 
             t=t+1
-
+    def removeLabel(self,arc,diclabel):
+        arc2 = open("result.asm","a")
+        linhas = arc.readlines()
+        t=1
+        print "entrando"
+        print diclabel.values()
+        for line in linhas:
+            if t in diclabel.values():
+                print "yes"
+                print line
+                line = "\n"
+                t= t+1
+            else:
+                print "not"
+                t= t+1
     def dates():
         t=0
         linhas = arc.readline()

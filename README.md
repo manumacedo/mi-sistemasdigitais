@@ -3,4 +3,4 @@ PBL Sistemas Digitais
 
 Run
 
-python parser.py
+python main.py
