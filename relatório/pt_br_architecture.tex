@@ -1,0 +1,166 @@
+%
+% Portuguese-BR vertion
+% 
+\documentclass{report}
+
+\usepackage{ipprocess}
+\usepackage[utf8]{inputenc} 
+\usepackage[brazil]{babel} % Uncomment for portuguese
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{graphicx}
+
+\sloppy
+
+\graphicspath{{./pictures/}} % Pictures dir
+\makeindex
+\begin{document}
+
+\DocumentTitle{Documento de Arquitetura}
+\Project{ANTARES-R2}
+\Organization{FAZEMOS QUALQUER NEGÓCIO INC.}
+\Version{Build 3.0a}
+
+\capa
+\newpage
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Revision History
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Histórico de Revisões}
+  \vspace*{1cm}
+  \begin{table}[ht]
+    \centering
+    \begin{tabular}[pos]{|m{2cm} | m{8cm} | m{4cm}|} 
+      \hline
+      \cellcolor[gray]{0.9}
+      \textbf{Date} & \cellcolor[gray]{0.9}\textbf{Descrição} & \cellcolor[gray]{0.9}\textbf{Autor(s)}\\
+      \hline
+      12/08/2016 &  Concepção do documento & Manuelle Macedo \\ \hline    
+      13/08/2016 &  Codificação das instruções e Estruturação do documento & Manuelle Macedo \\ \hline
+      14/08/2016 &  Requisitos funcionais e não funcionais & Manuelle Macedo \\ \hline
+      15/08/2016 &  Finalização da codificação das instruções e revisão geral & Manuelle Macedo \\ \hline
+      14/08/2016 &  Descrição sobre o Assembler e características gerais & João Pedro \\ \hline
+    \end{tabular}
+  \end{table}
+
+% TOC instantiation
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Document main content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introdução}
+  
+  \section{Propósito do Documento}
+  Este documento descreve parte da arquitetura do projeto \ipPROCESSProject, incluindo informações sobre as instruções, a memória compartilhada, e alguns elementos do processador, bem como o funcionamento do assembler para tal. Ele também apresenta informações sobre o assembler construído para que qualquer código em Assembly respeitando nossas instruções, rode no IP-Core. O principal objetivo deste documento é definir as especificações do projeto \ipPROCESSProject e prover uma visão geral completa do mesmo.
+  
+  \section{Stakeholders}
+    \FloatBarrier
+    \begin{table}[H] 
+      \begin{center}
+        \begin{tabular}[pos]{|m{6cm} | m{8cm}|} 
+          \hline 
+          \cellcolor[gray]{0.9}\textbf{Nome} & \cellcolor[gray]{0.9}\textbf{Papel/Responsabilidades} \\ \hline 
+          Manuelle	& Análise \\  \hline 
+          João Pedro	& Projeto \\  \hline 
+        \end{tabular}
+      \end{center}
+    \end{table} 
+
+\section{Visão Geral do Documento}
+
+O presente documento é apresentado como segue:
+
+  \begin{itemize}
+   \item \textbf{Capítulo 2 --} Este capítulo apresenta uma visão geral da arquitetura, falando um pouco sobre as instruções e algumas características gerais do processador, bem como o assembler.
+  \end{itemize}
+
+
+%   % inicio das definições do documento
+%   \section{Definições}
+%     \FloatBarrier
+%     \begin{table}[H]
+%       \begin{center}
+%         \begin{tabular}[pos]{|m{5cm} | m{9cm}|} 
+%           \hline
+%           \cellcolor[gray]{0.9}\textbf{Termo} & \cellcolor[gray]{0.9}\textbf{Descrição} \\ \hline
+%                           &                       \\ \hline
+%         \end{tabular}
+%       \end{center}
+%     \end{table}  
+%   % fim
+
+  % inicio da tabela de acronimos e abreviacoes do documento
+  \section{Acrônimos e Abreviações}
+    \FloatBarrier
+    \begin{table}[H]
+      \begin{center}
+        \begin{tabular}[pos]{|m{2cm} | m{12cm}|} 
+          \hline
+          \cellcolor[gray]{0.9}\textbf{Sigla} & \cellcolor[gray]{0.9}\textbf{Descrição} \\ \hline
+              OPCODE  & Código de operação  \\ \hline
+              PC  & Contador de Programa  \\ \hline
+              RD  & Registrador de destino  \\ \hline
+              RS, RT  & Registrador de origem dos operandos\\ \hline
+              HI  & 32 bits mais significativos do acumulador  \\ \hline
+              LO  & 32 bits menos significativos do acumulador  \\ \hline
+        \end{tabular}
+      \end{center}
+    \end{table}  
+  % fim
+
+\chapter{Visão Geral da Arquitetura}
+
+    \section{Características Gerais}
+A arquitetura a qual foi proposta é dotada das seguintes características:  32 Bits para instruções, 32 registradores de propósito geral, o nível ISA composto por 64 instruções sendo que  6 delas são pseudo-Instruções, a organização da memória é dada de forma Big Endian, Tendo essa memoria como compartilhada  e tendo dois registradores especiais para operações com o acumulador, além de trabalhar com 5 modos de endereçamento.
+  \input{instrucoes}
+  
+  \section{Requisitos}
+  
+  \subsection{Funcionais}
+  Todas as instruções são requisitos essenciais pois sem elas o módulo não funciona como deveria. Por ser uma arquitetura de 32 bits, as palavras de entrada e saída tem 32 bits. O módulo ainda conta com \textit{flags} de zero, \textit{overflow}, \textit{carry} e negativo.
+  
+  \subsection{Não Funcionais}
+  A memória possui o tamanho de 64KB e é compartilhada, ou seja, é a mesma memória para as instruções e dados. A palavra tem o tamanho de 32 bits, ou seja os dados tem o mesmo tamanho que uma instrução. Os dados são colocados na memória usando o formato Big Endian, onde os bit mais significativos vem primeiro, na posição de memória.  Temos um banco de registradores 32 registradores de proposito geral e mais 2 para acumulador chamados de LI e HO. Na tabela abaixo tem-se a descrição dos 32 registradores.
+  
+  \FloatBarrier
+    \begin{table}[H]
+      \begin{center}
+        \begin{tabular}[pos]{|m{3cm} | m{3cm}| m{8cm} |} 
+          \hline
+          \cellcolor[gray]{0.9}\textbf{Número do Registrador} & \cellcolor[gray]{0.9}\textbf{Nome Alternativo} & \cellcolor[gray]{0.9}\textbf{Descrição} \\ \hline
+              0  & zero & O valor 0 \\ \hline
+              1  & \$at & Reservado para o Assembler\\ \hline
+              2-3  & \$v0-\$v1 & Valores de expressões e resultados de funções\\ \hline
+              4-7  & \$a0-\$a3 & Primeiros 4 parâmetros de sub-rotinas.\\ \hline
+              8-15  & \$t0-\$t7 & Chamadas  \\ \hline
+              16-23  & \$s0-\$s7 &  Variáveis Salvas\\ \hline
+              24-25  & \$t8-\$t9 & Temporários \\ \hline
+              26-27  & \$k0-\$k1 &  OS temporário \\ \hline
+              28  & \$gp & Global Point \\  \hline
+              29  & \$sp & Stack point \\ \hline
+              30  & \$s8/\$fp & Frame point\\ \hline
+              31  & \$ra & Procedimento de Return de Endereço \\ \hline
+        \end{tabular}
+      \end{center}
+    \end{table}  
+ 
+  
+  \section{Assembler}
+  
+  O Assembler esta implementado da seguinte forma, para realizar a montagem da instrução primeiramente é preciso verificar todas as linhas, nesta verificação, são retirados os comentários, e para que possamos medir o tamanho do programa que será gerado. Esta informação é relevante para que ao terminar a montagem do programa, possamos reservar um espaço para a memoria de dados, e realizando a contagem, podemos definir a partir de qual endereço os dados serão gravados. \\
+    Outra informação importante nesta verificação é a identificação das \textit{labels}, neste momento, nós procuramos todas as \textit{labels}, e guardados a linha na qual ela está sendo chamada. Com essa informação guardada, toda vez que for chamada essa \textit{label} em um \textit{branch} ou \textit{jump}, nós traduziremos para o endereço na qual esta \textit{label} está sendo referenciada.
+    Outra parte essencial do Assembler é o verificador de instruções, nele após esse estagio de pré processamento, nós identificamo as instruções do tipo I, J e R ,Não foram implementados os \textit{branchs}, ao recebermos a instrução, primeiramente nós identificamos qual o tipo dela, ou seja se ela faz de parte de algum dos grupos de instruções que temos, ao identificar qual é a instrução, sabemos todas as informações que são necessárias para podermos traduzir para o seu binário correspondente, sabemos o seu opcode, quantos registradores virão junto a instrução, e onde esses dados devem ser colocados em cada seguimento do binário de saída, por exemplo, sabemos que os 6 primeiros opcodes, e que os 11 últimos bits de instruções do tipo R correspondem a instruções ao \textit{Shift} e o \textit{Funct} da instrução.
+    
+    Para executar o Assembler é preciso a linguagem \textit{python} instalada, e rodar a classe \textit{main.py}, dentro dela é possível modificar qual arquivo será lido para tradução.
+    
+  
+
+% Optional bibliography section
+% To use bibliograpy, first provide the ipprocess.bib file on the root folder.
+% \bibliographystyle{ieeetr}
+% \bibliography{ipprocess}
+
+\end{document}
