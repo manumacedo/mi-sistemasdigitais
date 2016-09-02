@@ -1,0 +1,14 @@
+`timescale 1ns / 1ps
+
+
+module Extender(
+input [0:15] A,
+input SignEX,
+output Extender[0:31]
+};
+
+
+if (SignEX == 0)
+  assign Extender = 16'b0 + A
+else
+  assing Extender = 16'bA[31] + A
