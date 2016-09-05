@@ -1,4 +1,4 @@
-module Register_Bank (
+module REGISTER_BANK (
   write,
   write_data,
   write_address,

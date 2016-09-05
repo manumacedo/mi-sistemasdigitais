@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\usuario\Documents\GitHub
+vAdd
+Z1 !s100 5je>jF8fD;c8l0@O6@GGb1
+Z2 Im_Fh533gbD;iddLXeUSRi1
+Z3 VkMScD<QDdAmYzMDJ8AM]e0
+Z4 dC:\Users\usuario\Documents\GitHub\mi-sistemasdigitais
+Z5 w1473085723
+Z6 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v
+Z7 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v
+L0 3
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v|
+Z10 o-work work -O0
+n@add
+Z11 !s108 1473087245.608000
+Z12 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCompare
+!i10b 1
+!s100 TJ62EMJmgYDjA@0ob=z9:0
+IigomVAR?A3jkeTR4o2zJk2
+V>?hEYQF=fz;0elaz1J;hD0
+R4
+w1473087444
+8C:\Users\usuario\Documents\GitHub\mi-sistemasdigitais\mips32\Compare.v
+FC:\Users\usuario\Documents\GitHub\mi-sistemasdigitais\mips32\Compare.v
+L0 3
+R8
+r1
+!s85 0
+31
+!s108 1473087447.151000
+!s107 C:\Users\usuario\Documents\GitHub\mi-sistemasdigitais\mips32\Compare.v|
+!s90 -reportprogress|300|-work|work|C:\Users\usuario\Documents\GitHub\mi-sistemasdigitais\mips32\Compare.v|
+!s101 -O0
+R10
+n@compare
+vMux2
+Z13 !s100 ^cRj8gaV[>oiAKPAm<aLP3
+Z14 I?:AP=l^489IFf[dGnMWgB1
+Z15 VW=W>Ag=ailKBn`jV?OFR?3
+R4
+R5
+Z16 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v
+Z17 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v
+L0 3
+R8
+r1
+31
+Z18 !s90 -reportprogress|300|-work|work|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v|
+R10
+Z19 n@mux2
+Z20 !s108 1473087245.838000
+Z21 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMux4
+Z22 !s100 hODMKlPd;6DaLg4G7Va^i3
+Z23 IVmE^6T:F4cSKE28iO5kSI2
+Z24 V^7b60n2aVII^VbLeiC9mf3
+R4
+R5
+Z25 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v
+Z26 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v
+L0 3
+R8
+r1
+31
+Z27 !s90 -reportprogress|300|-work|work|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v|
+R10
+Z28 n@mux4
+!i10b 1
+!s85 0
+Z29 !s108 1473087246.035000
+Z30 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v|
+!s101 -O0

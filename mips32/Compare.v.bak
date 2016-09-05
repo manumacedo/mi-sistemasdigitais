@@ -6,7 +6,7 @@ module Compare(
     output EQ, 
     output TLZ, 
     output NE, 
-    output GEZ
+    output GEZ, 
 
     );
 
