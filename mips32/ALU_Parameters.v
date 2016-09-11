@@ -1,4 +1,4 @@
-/*Operações da ALU*/
+
 parameter [3:0] AluOp_Add  = 4'b0010;
 parameter [3:0] AluOp_Sub  = 4'b0110;
 parameter [3:0] AluOp_Lui  = 4'b0100;
@@ -9,7 +9,7 @@ parameter [3:0] AluOp_Div  = 4'b1001;
 parameter [3:0] AluOp_Mfhi = 4'b1110;
 parameter [3:0] AluOp_Slt  = 4'b0111;
 
-/*Operações do Controlador da ALU*/
+
 parameter [2:0] AluCtrl_R    = 3'b000;
 parameter [2:0] AluCtrl_Lui  = 3'b001;
 parameter [2:0] AluCtrl_Addi = 3'b010;

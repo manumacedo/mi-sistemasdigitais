@@ -1,0 +1,74 @@
+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Extender.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Extender.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Extender
+
+Top level modules:
+	Extender
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Add.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Add.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Add
+
+Top level modules:
+	Add
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUControl.v {1 {vlog -work work +incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUControl.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALUControl
+
+Top level modules:
+	ALUControl
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux2.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux2.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Mux2
+
+Top level modules:
+	Mux2
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux4.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux4.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Mux4
+
+Top level modules:
+	Mux4
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Compare.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Compare.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Compare
+
+Top level modules:
+	Compare
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Register_Bank.v {0 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Register_Bank.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Register_Bank
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Register_Bank.v(30): Declarations not allowed in unnamed block.
+
+} {4.0 5.0} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/HazardDetectionUnit.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/HazardDetectionUnit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module HazardDetectionUnit
+
+Top level modules:
+	HazardDetectionUnit
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALU.v {1 {vlog -work work +incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALU.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ForwardingUnit.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ForwardingUnit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ForwardingUnit
+
+Top level modules:
+	ForwardingUnit
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v {0 {vlog -work work +incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module EXTest
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(182): BEGIN - END required around task/function statements
+
+} {4.0 5.0} {}}

@@ -47,6 +47,7 @@ module ALUTest ();
         input [31:0] AluOut, RefOut;
         input [5:0] funct;
         input [2:0] AluCtrl;
+
         begin
             $display ("Funct: %b  AluCtrl: %b A: %d B: %d  shamt: %d",funct,AluCtrl,A,B,shamt);
             $display ("AluOut: %d  RefOut: %d",AluOut,RefOut);

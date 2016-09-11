@@ -10,7 +10,12 @@ module ALU (
     input [31:0] B,
     input [4:0] Shamt,
     input [3:0] ALUOp,
-    output reg [31:0] ALUOut
+    output reg [31:0] ALUOut,
+
+    output ZERO,
+    output NEGATIVE,
+    output reg CARRY,
+    output OVERFLOW
     );
 
     `include "ALU_Parameters.v"
@@ -33,7 +38,7 @@ module ALU (
 
     always @(*) begin
         case (ALUOp)
-            AluOp_Add:  ALUOut      <= (A + B);
+            AluOp_Add:  {CARRY, ALUOut}      <= (A + B);
             AluOp_Sub:  ALUOut      <= (A - B);
             AluOp_Lui:  ALUOut      <= {B[15:0], 16'b0};
             AluOp_Sll:  ALUOut      <= B << Shamt;
@@ -56,4 +61,13 @@ module ALU (
             endcase
         end
     end
+
+    // todos os bits de ALUOut devem ser zero
+    assign ZERO = ~(|ALUOut);
+
+    // verifica se B é maior que A numa operação de subtração
+    assign NEGATIVE = ( (A < B) && ALUOp == AluOp_Sub) ? 1 : 0;
+
+    // verifica se houve overflow
+    assign OVERFLOW = ({CARRY, ALUOut[31]} == 2'b01);
 endmodule
