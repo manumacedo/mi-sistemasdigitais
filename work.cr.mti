@@ -69,6 +69,26 @@ Top level modules:
 } {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v {0 {vlog -work work +incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module EXTest
-** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(182): BEGIN - END required around task/function statements
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(211): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(216): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(221): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(226): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(232): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(237): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(242): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(247): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(252): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(257): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(262): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(267): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(272): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(277): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(282): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(293): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(299): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(309): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(319): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(330): Number of actuals and formals does not match in task call.
+** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EXTest.v(341): Number of actuals and formals does not match in task call.
 
-} {4.0 5.0} {}}
+} {4.0 25.0} {}}
