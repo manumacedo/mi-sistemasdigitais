@@ -25,7 +25,7 @@ module EXTest ();
     wire [3:0] AluOp;
     wire [31:0] RS_DATA,RT_DATA,in11,Out_MEmD_ALU,in13;
     reg [4:0] RS,RT,RD;
-    wire [1:0] ForA,ForB,ForC,ID_EX_ALUSrc;
+    wire [1:0] ForA,ForB,ForC;
     wire [31:0] out0,out1,out2,out3,out4,out5;
     // Fios do ForwardingUnit
     reg MEMWB_MemToReg;
@@ -33,8 +33,9 @@ module EXTest ();
     reg EXMEM_RegWrite;
     reg EXMEM_MemWrite;
     reg [4:0] EXMEM_RegRd;
-    reg [4:0] MEMWB_RegRd;
-    reg ID_EX_RegDst,ID_EX_NoDest;
+    reg [4:0] MEMWB_RegRd,Reg31;
+
+    reg ID_EX_RegDst,ID_EX_NoDest,ID_EX_ALUSrc;
 
     Mux4 Mux00(
         .sel(ForA),
@@ -72,7 +73,7 @@ module EXTest ();
 
         Mux2 Mux40(
             .sel(ID_EX_RegWrite),
-            .in0(0), // zero
+            .in0(5'b0), // zero
             .in1(Reg31), // reg 31
             .out(out4)
           );
@@ -133,6 +134,7 @@ module EXTest ();
         input [4:0] RT;
         input [4:0] EXMEM_RegRd;
         input [4:0] MEMWB_RegRd;
+        input [4:0] Reg31;
         output [1:0] ForB;
         output [1:0] ForA;
         output ForC;
@@ -175,7 +177,7 @@ module EXTest ();
     endtask
 
     integer i;
-    localparam loops = 50;
+    localparam loops = 5000;
     initial begin
         reset = 0;
         for (i = 0; i < loops; i=i+1) begin
@@ -183,15 +185,18 @@ module EXTest ();
             A = {$random} & 32'hFFFFFFFF;
             B = {$random} & 32'hFFFFFFFF;
             shamt = {$random} & 5'h1F;
-            RT = {$random} & 5'b11111;
-            RD = {$random} & 5'b11111;
-
-            ID_EX_RegDst = 0;  //mux
-            ID_EX_NoDest = 0;  //mux
+            RS = {$random} & 5'b11111;
+            RT = {$random} & 5'b11111;  // destino
+            RD = {$random} & 5'b11111; // destino
+            Reg31 = {$random} & 5'b11111;
+            ID_EX_RegDst = {$random} & 1'b1;  //mux
+            ID_EX_NoDest = {$random} & 1'b1;  //mux
+            ID_EX_ALUSrc = {$random} & 1'b1;
             MEMWB_MemToReg =  {$random} & 1'b1;
             MEMWB_RegWrite =  {$random} & 1'b1;
             EXMEM_RegWrite =  {$random} & 1'b1 ;
             EXMEM_MemWrite =  {$random} & 1'b1;
+
             AluCtrl = AluCtrl_R;
             funct = Funct_Add;
 
@@ -199,25 +204,25 @@ module EXTest ();
 
             #1;
 
-            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
-            if (i%2==0)begin
-              EXMEM_RegRd =  RD;
-              end
+            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,Reg31,ForB,ForA,ForC);
             funct = Funct_Sub;
             RefOut = A - B;
             #1;
+            MEMWB_RegRd = EXMEM_RegRd;
             checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
             funct = Funct_Sll;
             RefOut = B << shamt;
             #1;
+            MEMWB_RegRd = EXMEM_RegRd;
             checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
-            MEMWB_RegRd = EXMEM_RegRd;
-            EXMEM_RegRd =  RD;
             funct = Funct_Mul;
             RefOut = $signed(A)*$signed(B);
             #1;
+
+            MEMWB_RegRd = EXMEM_RegRd;
+
             checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
 
@@ -226,7 +231,7 @@ module EXTest ();
             #1;
 
             MEMWB_RegRd = EXMEM_RegRd;
-            EXMEM_RegRd =  RD;
+
 
             checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
@@ -235,7 +240,7 @@ module EXTest ();
             #1;
 
             MEMWB_RegRd = EXMEM_RegRd;
-            EXMEM_RegRd =  RD;
+
 
             checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
@@ -244,7 +249,7 @@ module EXTest ();
             #1;
 
             MEMWB_RegRd = EXMEM_RegRd;
-            EXMEM_RegRd =  RD;
+
 
             checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
@@ -253,7 +258,7 @@ module EXTest ();
             #1;
 
             MEMWB_RegRd = EXMEM_RegRd;
-            EXMEM_RegRd =  RD;
+
 
             checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
@@ -262,7 +267,7 @@ module EXTest ();
             #1;
 
             MEMWB_RegRd = EXMEM_RegRd;
-            EXMEM_RegRd =  RD;
+
 
             checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
@@ -271,34 +276,41 @@ module EXTest ();
             #1;
 
             MEMWB_RegRd = EXMEM_RegRd;
-            EXMEM_RegRd =  RD;
+
 
             checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
             AluCtrl = AluCtrl_Bne;
             RefOut = A - B;
             #1;
-            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl);
+
+            MEMWB_RegRd = EXMEM_RegRd;
+
+            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
             AluCtrl = AluCtrl_J;
             RefOut = A + B;
             #1;
-            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl);
+            MEMWB_RegRd = EXMEM_RegRd;
+            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
             AluCtrl = AluCtrl_Jal;
             RefOut = A + B;
             #1;
-            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl);
+            MEMWB_RegRd = EXMEM_RegRd;
+            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
             AluCtrl = AluCtrl_Lw;
             RefOut = A + B;
             #1;
-            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl);
+            MEMWB_RegRd = EXMEM_RegRd;
+            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
             AluCtrl = AluCtrl_Sw;
             RefOut = A + B;
             #1;
-            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl);
+            MEMWB_RegRd = EXMEM_RegRd;
+            checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
         end
 
         shamt = 0;
@@ -309,13 +321,15 @@ module EXTest ();
         B = 1;
         RefOut = $signed(A)*$signed(B);
         #1;
-        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl);
+        MEMWB_RegRd = EXMEM_RegRd;
+        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
         A = -1;
         B = 0;
         RefOut = $signed(A)*$signed(B);
         #1;
-        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl);
+        MEMWB_RegRd = EXMEM_RegRd;
+        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
         funct = Funct_Div;
         A = 6;
@@ -325,7 +339,8 @@ module EXTest ();
         funct = Funct_Mfhi;
         RefOut = 0;
         #1;
-        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl);
+        MEMWB_RegRd = EXMEM_RegRd;
+        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
         funct = Funct_Div;
         A = 1;
@@ -335,7 +350,8 @@ module EXTest ();
         funct = Funct_Mfhi;
         RefOut = 1;
         #1;
-        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl);
+        MEMWB_RegRd = EXMEM_RegRd;
+        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
         reset = 1;
         funct = Funct_Div;
@@ -346,7 +362,8 @@ module EXTest ();
         funct = Funct_Mfhi;
         RefOut = 0;
         #1;
-        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl);
+        MEMWB_RegRd = EXMEM_RegRd;
+        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
         reset = 0;
         funct = Funct_Div;
@@ -357,7 +374,8 @@ module EXTest ();
         funct = Funct_Mfhi;
         RefOut = 2;
         #1;
-        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl);
+        MEMWB_RegRd = EXMEM_RegRd;
+        checkOutput(A,B,shamt,AluOut,RefOut,funct,AluCtrl,RS,RT,EXMEM_RegRd,MEMWB_RegRd,ForB,ForA,ForC);
 
         $finish();
     end

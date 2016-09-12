@@ -1,0 +1,222 @@
+C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v {1 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Extender
+
+Top level modules:
+	Extender
+
+} {} {}} C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v {1 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Add
+
+Top level modules:
+	Add
+
+} {} {}} C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v {0 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALUTest
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(5): Cannot open `include file "Opcodes_Functs_Parameters.v".
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(6): Cannot open `include file "ALU_Parameters.v".
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(74): (vlog-2730) Undefined variable: 'AluCtrl_R'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(75): (vlog-2730) Undefined variable: 'Funct_Add'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(81): (vlog-2730) Undefined variable: 'Funct_Sub'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(86): (vlog-2730) Undefined variable: 'Funct_Sll'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(91): (vlog-2730) Undefined variable: 'Funct_Mul'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(97): (vlog-2730) Undefined variable: 'Funct_Slt'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(102): (vlog-2730) Undefined variable: 'Funct_Jr'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(107): (vlog-2730) Undefined variable: 'AluCtrl_Lui'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(112): (vlog-2730) Undefined variable: 'AluCtrl_Addi'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(117): (vlog-2730) Undefined variable: 'AluCtrl_Ori'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(122): (vlog-2730) Undefined variable: 'AluCtrl_Beq'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(127): (vlog-2730) Undefined variable: 'AluCtrl_Bne'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(132): (vlog-2730) Undefined variable: 'AluCtrl_J'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(137): (vlog-2730) Undefined variable: 'AluCtrl_Jal'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(142): (vlog-2730) Undefined variable: 'AluCtrl_Lw'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(147): (vlog-2730) Undefined variable: 'AluCtrl_Sw'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(169): (vlog-2730) Undefined variable: 'Funct_Div'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v(174): (vlog-2730) Undefined variable: 'Funct_Mfhi'.
+
+
+} {4.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 34.0 35.0 36.0 37.0 38.0 39.0 40.0 41.0} {}} C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v {0 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALUControl
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(12): Cannot open `include file "ALU_Parameters.v".
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(13): Cannot open `include file "Opcodes_Functs_Parameters.v".
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(17): (vlog-2730) Undefined variable: 'AluCtrl_R'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(19): (vlog-2730) Undefined variable: 'Funct_Add'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(19): (vlog-2730) Undefined variable: 'AluOp_Add'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(20): (vlog-2730) Undefined variable: 'Funct_Sub'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(20): (vlog-2730) Undefined variable: 'AluOp_Sub'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(21): (vlog-2730) Undefined variable: 'Funct_Sll'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(21): (vlog-2730) Undefined variable: 'AluOp_Sll'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(22): (vlog-2730) Undefined variable: 'Funct_Mul'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(22): (vlog-2730) Undefined variable: 'AluOp_Mul'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(23): (vlog-2730) Undefined variable: 'Funct_Div'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(23): (vlog-2730) Undefined variable: 'AluOp_Div'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(24): (vlog-2730) Undefined variable: 'Funct_Mfhi'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(24): (vlog-2730) Undefined variable: 'AluOp_Mfhi'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(25): (vlog-2730) Undefined variable: 'Funct_Slt'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(25): (vlog-2730) Undefined variable: 'AluOp_Slt'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(26): (vlog-2730) Undefined variable: 'Funct_Jr'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(31): (vlog-2730) Undefined variable: 'AluCtrl_Lui'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(31): (vlog-2730) Undefined variable: 'AluOp_Lui'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(32): (vlog-2730) Undefined variable: 'AluCtrl_Addi'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(33): (vlog-2730) Undefined variable: 'AluCtrl_Ori'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(33): (vlog-2730) Undefined variable: 'AluOp_Or'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(34): (vlog-2730) Undefined variable: 'AluCtrl_Beq'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(35): (vlog-2730) Undefined variable: 'AluCtrl_Bne'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(36): (vlog-2730) Undefined variable: 'AluCtrl_J'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(37): (vlog-2730) Undefined variable: 'AluCtrl_Jal'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(38): (vlog-2730) Undefined variable: 'AluCtrl_Lw'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v(39): (vlog-2730) Undefined variable: 'AluCtrl_Sw'.
+
+
+} {4.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 34.0 35.0 36.0 37.0 38.0 39.0 40.0 41.0 42.0 43.0 44.0 45.0 46.0 47.0 48.0 49.0 50.0 51.0 52.0 53.0 54.0 55.0 56.0 57.0 58.0 59.0} {}} C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v {1 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Mux2
+
+Top level modules:
+	Mux2
+
+} {} {}} C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v {1 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Mux4
+
+Top level modules:
+	Mux4
+
+} {} {}} C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Compare.v {1 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Compare.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Compare
+
+Top level modules:
+	Compare
+
+} {} {}} C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Register_Bank.v {0 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Register_Bank.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Register_Bank
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Register_Bank.v(30): Declarations not allowed in unnamed block.
+
+} {4.0 5.0} {}} C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v {1 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module HazardDetectionUnit
+
+Top level modules:
+	HazardDetectionUnit
+
+} {} {}} C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v {0 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v(21): Cannot open `include file "ALU_Parameters.v".
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v(41): (vlog-2730) Undefined variable: 'AluOp_Add'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v(42): (vlog-2730) Undefined variable: 'AluOp_Sub'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v(43): (vlog-2730) Undefined variable: 'AluOp_Lui'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v(44): (vlog-2730) Undefined variable: 'AluOp_Sll'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v(45): (vlog-2730) Undefined variable: 'AluOp_Or'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v(46): (vlog-2730) Undefined variable: 'AluOp_Mul'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v(47): (vlog-2730) Undefined variable: 'AluOp_Mfhi'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v(48): (vlog-2730) Undefined variable: 'AluOp_Slt'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v(59): (vlog-2730) Undefined variable: 'AluOp_Div'.
+
+
+} {4.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0} {}} C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v {1 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ForwardingUnit
+
+Top level modules:
+	ForwardingUnit
+
+} {} {}} C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v {0 {vlog -work work C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module EXTest
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(5): Cannot open `include file "Opcodes_Functs_Parameters.v".
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(6): Cannot open `include file "ALU_Parameters.v".
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(195): (vlog-2730) Undefined variable: 'AluCtrl_R'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(196): (vlog-2730) Undefined variable: 'Funct_Add'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(206): (vlog-2730) Undefined variable: 'Funct_Sub'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(211): (vlog-2730) Undefined variable: 'Funct_Sll'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(218): (vlog-2730) Undefined variable: 'Funct_Mul'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(224): (vlog-2730) Undefined variable: 'Funct_Slt'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(233): (vlog-2730) Undefined variable: 'Funct_Jr'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(242): (vlog-2730) Undefined variable: 'AluCtrl_Lui'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(251): (vlog-2730) Undefined variable: 'AluCtrl_Addi'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(260): (vlog-2730) Undefined variable: 'AluCtrl_Ori'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(269): (vlog-2730) Undefined variable: 'AluCtrl_Beq'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(278): (vlog-2730) Undefined variable: 'AluCtrl_Bne'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(283): (vlog-2730) Undefined variable: 'AluCtrl_J'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(288): (vlog-2730) Undefined variable: 'AluCtrl_Jal'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(293): (vlog-2730) Undefined variable: 'AluCtrl_Lw'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(298): (vlog-2730) Undefined variable: 'AluCtrl_Sw'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(320): (vlog-2730) Undefined variable: 'Funct_Div'.
+
+** Error: C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v(325): (vlog-2730) Undefined variable: 'Funct_Mfhi'.
+
+
+} {4.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 34.0 35.0 36.0 37.0 38.0 39.0 40.0 41.0} {}}

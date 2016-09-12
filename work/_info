@@ -4,210 +4,210 @@ K3
 cModel Technology
 Z0 dC:\Users\usuario\Documents\GitHub
 vAdd
-Z1 !s100 f4<O`SG4^1RD1mX@]D0;J1
-Z2 INdP5:kho5h5j<j[Jjcm>60
+Z1 !s100 5je>jF8fD;c8l0@O6@GGb1
+Z2 Im_Fh533gbD;iddLXeUSRi1
 Z3 VkMScD<QDdAmYzMDJ8AM]e0
-Z4 dC:\Users\Preton\Documents\github\mi-sistemasdigitais
-Z5 w1473338568
-Z6 8C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Add.v
-Z7 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Add.v
+Z4 dC:\Users\usuario\Documents\GitHub\mi-sistemasdigitais
+Z5 w1473085723
+Z6 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v
+Z7 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v
 L0 3
 Z8 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -reportprogress|300|-work|work|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Add.v|
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v|
 Z10 o-work work -O0
 n@add
-Z11 !s108 1473603825.435000
-Z12 !s107 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Add.v|
+Z11 !s108 1473674981.589000
+Z12 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALU
-Z13 !s100 bDiaezecV?b4:ZzaF_9BF1
-Z14 I;PP]6K;>VbK34ggfNf7j80
-Z15 VICYBWjVEGheaGfBL=<eW_1
+Z13 IdVm^l3ZR@Q8f`LZPCa[dP2
+Z14 VICYBWjVEGheaGfBL=<eW_1
 R4
-Z16 w1473605415
-Z17 8C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALU.v
-Z18 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALU.v
-Z19 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALU_Parameters.v
+Z15 w1473674070
+Z16 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v
+Z17 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v
+Z18 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU_Parameters.v
 L0 6
 R8
 r1
 31
-Z20 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALU.v|
 R10
-Z21 !s92 -work work +incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32 -O0
-Z22 n@a@l@u
+Z19 n@a@l@u
+Z20 !s100 e_OaoSb62zhfRne=OfbXE2
+Z21 !s108 1473674981.723000
+Z22 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU_Parameters.v|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v|
+Z23 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v|
+Z24 !s92 -work work +incdir+C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32 -O0
 !i10b 1
 !s85 0
-Z23 !s108 1473605439.302000
-Z24 !s107 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALU_Parameters.v|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALU.v|
 !s101 -O0
 vALUControl
-!i10b 1
-Z25 !s100 ?^Zl5Q>^g]8FBM_cNiXnj0
-Z26 IVQ@@:UlZ<Um]ZC=NY>>_Y3
-Z27 VZlA:gNjAKRL<?HPGme4UX1
+Z25 II3hl>iQO59h>jne@[PCdQ1
+Z26 VZlA:gNjAKRL<?HPGme4UX1
 R4
-w1473605087
-Z28 8C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUControl.v
-Z29 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUControl.v
-R19
-Z30 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.v
+R15
+Z27 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v
+Z28 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v
+R18
+Z29 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.v
 L0 6
 R8
 r1
-!s85 0
 31
-!s108 1473605700.369000
-!s107 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.v|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALU_Parameters.v|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUControl.v|
-Z31 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUControl.v|
-!s101 -O0
 R10
-R21
-Z32 n@a@l@u@control
+R24
+Z30 n@a@l@u@control
+Z31 !s100 kbhm^4oULNJNM;O9oI:YQ0
+Z32 !s108 1473674981.922000
+Z33 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.v|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU_Parameters.v|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v|
+Z34 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v|
+!i10b 1
+!s85 0
+!s101 -O0
 vALUTest
-Z33 ImeL=>PgiK1bzEZkI^1NlE2
-Z34 VMX9l1GYcQ@Q2OWT0lhm:K3
+Z35 I>D:F7P[cZILi6FBPR`OFb0
+Z36 VMX9l1GYcQ@Q2OWT0lhm:K3
 R4
-Z35 w1473603513
-Z36 8C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUTest.v
-Z37 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUTest.v
-R30
-R19
+R15
+Z37 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v
+Z38 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v
+R29
+R18
 L0 3
 R8
 r1
 31
 R10
-R21
-Z38 n@a@l@u@test
-Z39 !s100 ;1fo69Hf?@ePKkeV5jF;a0
-Z40 !s108 1473603825.802000
-Z41 !s107 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALU_Parameters.v|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.v|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUTest.v|
-Z42 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUTest.v|
+R24
+Z39 n@a@l@u@test
+Z40 !s100 heAN3O69B`G87R`LDkUnG1
+Z41 !s108 1473674982.269000
+Z42 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALU_Parameters.v|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.v|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v|
+Z43 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vCompare
-Z43 !s100 7RolhQN1Y`Zg@:fYi_7AE2
-Z44 I2B86oTf>B[n33:W51V7Oi2
-Z45 V>?hEYQF=fz;0elaz1J;hD0
+Z44 !s100 `QN1C[64MQUoTD[2Ba@Qf1
+Z45 IBIL@BDS^YZdjzEUEejJNj2
+Z46 V>?hEYQF=fz;0elaz1J;hD0
 R4
-R5
-Z46 8C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Compare.v
-Z47 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Compare.v
+Z47 w1473087444
+Z48 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Compare.v
+Z49 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Compare.v
 L0 3
 R8
 r1
 31
-Z48 !s90 -reportprogress|300|-work|work|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Compare.v|
+Z50 !s90 -reportprogress|300|-work|work|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Compare.v|
 R10
-Z49 n@compare
-Z50 !s108 1473603825.941000
-Z51 !s107 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Compare.v|
+Z51 n@compare
+Z52 !s108 1473674982.540000
+Z53 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Compare.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vExtender
-Z52 !s100 b0egllWNkHVRUgS8b?D6d0
-Z53 Iggm?N7D0`gRQE6T]]<=P_2
-Z54 VkbAAHdG6J5zaW`ITM]GQS1
+Z54 !s100 ^6oAVn1?ZXbAU2]?ck6>C0
+Z55 IkL_d9[SOPCleM^jP[LGdf0
+Z56 VkbAAHdG6J5zaW`ITM]GQS1
 R4
-Z55 w1473378608
-Z56 8C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Extender.v
-Z57 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Extender.v
+R15
+Z57 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v
+Z58 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v
 L0 8
 R8
 r1
 31
-Z58 !s90 -reportprogress|300|-work|work|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Extender.v|
+Z59 !s90 -reportprogress|300|-work|work|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v|
 R10
-Z59 n@extender
-Z60 !s108 1473603826.068000
-Z61 !s107 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Extender.v|
+Z60 n@extender
+Z61 !s108 1473674982.757000
+Z62 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vForwardingUnit
-Z62 !s100 <2G`0Y07Wc7cF]gfgn6863
-Z63 IHnAlN>bG^3ZFVCCDQCHdE1
-Z64 VECe58R=GnzM6l_l0?7=KT2
+Z63 !s100 ^HR2?[O6e8`a`C3aI4^b=0
+Z64 I2jJ_mPFEBK3lkM4Tak4g:0
+Z65 VECe58R=GnzM6l_l0?7=KT2
 R4
-Z65 w1473555380
-Z66 8C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ForwardingUnit.v
-Z67 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ForwardingUnit.v
+R15
+Z66 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v
+Z67 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v
 L0 3
 R8
 r1
 31
-Z68 !s90 -reportprogress|300|-work|work|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ForwardingUnit.v|
+Z68 !s90 -reportprogress|300|-work|work|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v|
 R10
 Z69 n@forwarding@unit
-Z70 !s108 1473603826.299000
-Z71 !s107 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ForwardingUnit.v|
+Z70 !s108 1473674982.972000
+Z71 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vHazardDetectionUnit
-Z72 !s100 RJUe@Ha>JiNHB8WTDzNoZ3
-Z73 IHn_[2UDggDbAd9AXZZh`T2
+Z72 !s100 ;<]7kMhlEDn9b7fPFZSiL0
+Z73 I1Vi0Od16bPS@6:__T_XNz3
 Z74 VFdHPP70cVbUFk8g5Lg5aZ1
 R4
-Z75 w1473354860
-Z76 8C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/HazardDetectionUnit.v
-Z77 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/HazardDetectionUnit.v
+R15
+Z75 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v
+Z76 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v
 L0 3
 R8
 r1
 31
-Z78 !s90 -reportprogress|300|-work|work|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/HazardDetectionUnit.v|
+Z77 !s90 -reportprogress|300|-work|work|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v|
 R10
-Z79 n@hazard@detection@unit
-Z80 !s108 1473603826.432000
-Z81 !s107 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/HazardDetectionUnit.v|
+Z78 n@hazard@detection@unit
+Z79 !s108 1473674983.094000
+Z80 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMux2
-Z82 !s100 0MJlD43@?m^>AH6SiVIZ<0
-Z83 Ie4?k[1REZKO8F;8_TWPCW2
-Z84 VW=W>Ag=ailKBn`jV?OFR?3
+Z81 !s100 ^cRj8gaV[>oiAKPAm<aLP3
+Z82 I?:AP=l^489IFf[dGnMWgB1
+Z83 VW=W>Ag=ailKBn`jV?OFR?3
 R4
 R5
-Z85 8C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux2.v
-Z86 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux2.v
+Z84 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v
+Z85 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v
 L0 3
 R8
 r1
 31
-Z87 !s90 -reportprogress|300|-work|work|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux2.v|
+Z86 !s90 -reportprogress|300|-work|work|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v|
 R10
-Z88 n@mux2
-Z89 !s108 1473603826.569000
-Z90 !s107 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux2.v|
+Z87 n@mux2
 !i10b 1
 !s85 0
+Z88 !s108 1473674983.229000
+Z89 !s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v|
 !s101 -O0
 vMux4
-Z91 !s100 DzYiYZEkhXe5eY?JR7F:=3
-Z92 IKXMeTXikfz>[=KPfNOgK52
-Z93 V^7b60n2aVII^VbLeiC9mf3
+!i10b 1
+Z90 !s100 hODMKlPd;6DaLg4G7Va^i3
+Z91 IVmE^6T:F4cSKE28iO5kSI2
+Z92 V^7b60n2aVII^VbLeiC9mf3
 R4
 R5
-Z94 8C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux4.v
-Z95 FC:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux4.v
+Z93 8C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v
+Z94 FC:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v
 L0 3
 R8
 r1
-31
-Z96 !s90 -reportprogress|300|-work|work|C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux4.v|
-R10
-Z97 n@mux4
-Z98 !s108 1473603826.705000
-Z99 !s107 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Mux4.v|
-!i10b 1
 !s85 0
+31
+!s108 1473674983.395000
+!s107 C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v|
+Z95 !s90 -reportprogress|300|-work|work|C:/Users/usuario/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v|
 !s101 -O0
+R10
+Z96 n@mux4
