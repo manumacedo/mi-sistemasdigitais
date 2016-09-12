@@ -149,9 +149,9 @@ module EXTest ();
         input [4:0] MEMWB_RegRd;
         input [4:0] Reg31;
         input [31:0] IMM;
-        output[1:0] ForB;
-        output[1:0] ForA;
-        output       ForC;
+        input [1:0] ForB;
+        input [1:0] ForA;
+        input       ForC;
 
         reg EQ_REGA;
         reg EQ_REGB;
