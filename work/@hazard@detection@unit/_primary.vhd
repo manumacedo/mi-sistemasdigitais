@@ -3,6 +3,7 @@ use verilog.vl_types.all;
 entity HazardDetectionUnit is
     port(
         IDEX_MemRead    : in     vl_logic;
+        IDEX_RegWrite   : in     vl_logic;
         EXMEM_MemWrite  : in     vl_logic;
         EXMEM_MemRead   : in     vl_logic;
         MemWrite        : in     vl_logic;

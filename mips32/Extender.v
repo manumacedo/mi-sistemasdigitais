@@ -13,5 +13,5 @@ module Extender (
 
     wire signBit = In[15];
 
-    assign Out = (SignExt) ? ((signBit) ? { 16'hFFFF, In } : { 16'b0 , In} ) : { 16'b0, In };
+    assign Out = (SignExt) ? ((signBit) ? { 16'hFFFF, In } : { 16'b0 , In} ) : { 16'b0, In }; 
 endmodule

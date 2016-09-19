@@ -14,7 +14,7 @@ module ForwardingUnit(
     output [1:0] ForA,
     output [1:0] ForB,
     output ForC
-);
+);				
 
     wire IDEX_EQ_EXMEM_Rs = (IDEX_RegRs == EXMEM_RegRd);
 
@@ -24,15 +24,17 @@ module ForwardingUnit(
 
     wire IDEX_EQ_MEMWB_Rt = (IDEX_RegRt == MEMWB_RegRd);
 
-    wire MEM_ForwardA = (EXMEM_RegWrite & (EXMEM_RegRd != 0) & IDEX_EQ_EXMEM_Rs);
+    wire EXMEM_EQ_MEMWB_Rd = (EXMEM_RegRd == MEMWB_RegRd);
 
-    wire MEM_ForwardB = (EXMEM_RegWrite & (EXMEM_RegRd != 0) & IDEX_EQ_EXMEM_Rt);
+    wire MEM_ForwardA = (EXMEM_RegWrite & EXMEM_RegRd != 0 & IDEX_EQ_EXMEM_Rs);
 
-    wire WB_ForwardA = (MEMWB_RegWrite & (MEMWB_RegRd != 0) & !(MEM_ForwardA) & IDEX_EQ_MEMWB_Rs);
+    wire MEM_ForwardB = (EXMEM_RegWrite & EXMEM_RegRd != 0 & IDEX_EQ_EXMEM_Rt);
 
-    wire WB_ForwardB = (MEMWB_RegWrite & (MEMWB_RegRd != 0) & !(MEM_ForwardB) & IDEX_EQ_MEMWB_Rt);
+    wire WB_ForwardA = (MEMWB_RegWrite & MEMWB_RegRd != 0 & !(MEM_ForwardA) & IDEX_EQ_MEMWB_Rs);
 
-    wire WB_ForwardC = (MEMWB_MemToReg & EXMEM_MemWrite & IDEX_EQ_MEMWB_Rt);
+    wire WB_ForwardB = (MEMWB_RegWrite & MEMWB_RegRd != 0 & !(MEM_ForwardB) & IDEX_EQ_MEMWB_Rt);
+
+    wire WB_ForwardC = (MEMWB_MemToReg & EXMEM_MemWrite & EXMEM_EQ_MEMWB_Rd);
 
     assign ForA = (MEM_ForwardA) ? 2'b10 : ( (WB_ForwardA) ? 2'b01 : 2'b00);
     assign ForB = (MEM_ForwardB) ? 2'b10 : ( (WB_ForwardB) ? 2'b01 : 2'b00);

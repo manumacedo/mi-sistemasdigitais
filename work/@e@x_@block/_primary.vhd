@@ -1,0 +1,40 @@
+library verilog;
+use verilog.vl_types.all;
+entity EX_Block is
+    port(
+        Clock           : in     vl_logic;
+        Reset           : in     vl_logic;
+        EX_PCplus4      : in     vl_logic_vector(31 downto 0);
+        EX_RsData       : in     vl_logic_vector(31 downto 0);
+        EX_RtData       : in     vl_logic_vector(31 downto 0);
+        EX_Immediate    : in     vl_logic_vector(31 downto 0);
+        EX_Instruction  : in     vl_logic_vector(31 downto 0);
+        EX_RtReg        : in     vl_logic_vector(4 downto 0);
+        EX_RdReg        : in     vl_logic_vector(4 downto 0);
+        EX_RegWrite     : in     vl_logic;
+        EX_MemtoReg     : in     vl_logic;
+        EX_MemRead      : in     vl_logic;
+        EX_MemWrite     : in     vl_logic;
+        EX_ALUCtrl      : in     vl_logic_vector(2 downto 0);
+        EX_ALUSrc       : in     vl_logic;
+        EX_RegDst       : in     vl_logic;
+        EX_NoDest       : in     vl_logic;
+        ForA            : in     vl_logic_vector(1 downto 0);
+        ForB            : in     vl_logic_vector(1 downto 0);
+        WB_WriteData    : in     vl_logic_vector(31 downto 0);
+        MEM_ALUOut      : out    vl_logic_vector(31 downto 0);
+        MEM_RtData      : out    vl_logic_vector(31 downto 0);
+        MEM_Instruction : out    vl_logic_vector(31 downto 0);
+        MEM_DestReg     : out    vl_logic_vector(4 downto 0);
+        EX_DestReg      : out    vl_logic_vector(4 downto 0);
+        MEM_RegWrite    : out    vl_logic;
+        MEM_MemtoReg    : out    vl_logic;
+        MEM_MemRead     : out    vl_logic;
+        MEM_MemWrite    : out    vl_logic;
+        ZERO            : out    vl_logic;
+        NEGATIVE        : out    vl_logic;
+        OVERFLOW        : out    vl_logic;
+        CARRY           : out    vl_logic;
+        UNDERFLOW       : out    vl_logic
+    );
+end EX_Block;
