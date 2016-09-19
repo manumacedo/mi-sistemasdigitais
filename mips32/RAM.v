@@ -5,7 +5,7 @@
     Endereço de 14 bits e saída de 32 bits
 */
 
-module RAM #(parameter SIZE = 16384, FILE = "C:/Users/Preton/Documents/github/tec499-pbl01-assembler/algs/primes.mc")(
+module RAM #(parameter SIZE = 16384)(
     input Clock,
     input [13:0] Address,
     input MemWrite,
@@ -24,7 +24,7 @@ module RAM #(parameter SIZE = 16384, FILE = "C:/Users/Preton/Documents/github/te
         for (i = 0; i < SIZE; i=i+1) begin
             memory[i] = 0;
         end
-        $readmemb(FILE, memory);
+        $readmemb( "C:/Users/Preton/Documents/github/tec499-pbl01-assembler/algs/primes.mc", memory);
     end
 
     // Escrita sequencial ao subir do clock
