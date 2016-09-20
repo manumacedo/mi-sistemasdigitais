@@ -24,7 +24,7 @@ module RAM #(parameter SIZE = 16384)(
         for (i = 0; i < SIZE; i=i+1) begin
             memory[i] = 0;
         end
-        $readmemb( "C:/Users/Preton/Documents/github/tec499-pbl01-assembler/algs/primes.mc", memory);
+        $readmemb( "C:/Users/Preton/Documents/github/tec499-pbl01-assembler/algs/bubble.mc", memory);
     end
 
     // Escrita sequencial ao subir do clock

@@ -111,7 +111,7 @@ module ID_Block (
     );
     
 
-    RegisterFile registerFile(
+    register_bank register_bank(
         .Clock(Clock),
         .Reset(Reset),
         .ReadRg1(ID_Rs),

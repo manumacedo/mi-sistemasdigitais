@@ -1,51 +1,45 @@
-module Register_Bank (
-  write,
-  write_data,
-  write_address,
-  read_address_1,
-  read_address_2,
-  read_data_1,
-  read_data_2
-);
+`timescale 1ns / 1ps
 
-input write;
-input write_data;
-input write_address;
-input read_address_1;
-input read_address_2;
-output read_data_1;
-output read_data_2;
+/*
+    Banco de registradores.
+    32 registradores de 32 bits cada.
+    Não se pode escrever na posição 0.
+*/
 
-wire write;
-wire [31:0] write_data;
-wire [4:0] write_address;
-wire [4:0] read_address_1;
-wire [4:0] read_address_2;
-reg [31:0] read_data_1;
-reg [31:0] read_data_2;
+module register_bank(
+    input Clock,
+    input Reset,
+    input [4:0] ReadRg1, ReadRg2, WriteRg,
+    input RegWrite,
+    input [31:0] WriteData,
+    output [31:0] ReadData1, ReadData2
+    );
 
-reg [31:0] registers [0:31];
+    // 32 registradores, sendo a posição 0  só   retorna  0
+    reg [31:0] registers [0:31];
+    //reg [31:0] rg1,rg2;
 
-initial begin
-  integer i;
+    // Inicialização do Banco
 
-  for (i = 0; i < 32; i = i + 1) begin
-    registers[i] = 0;
-  end
+    integer i;
+    initial begin
+      for (i = 0; i < 32; i=i+1) begin
+        registers[i] <= 0;
+      end
+      registers[29] <= 65536;
+      registers[30] <= 65536;
+    end
 
-  read_data_1 = 0;
-  read_data_2 = 0;
-end
 
-always begin : register_bank_process
+    // Escrita sequencial ao descer do clock
+    always @(posedge Clock) begin
 
-  if (write == 1 && write_address != 0) begin
-  #5  registers[write_address] = write_data;
-  end
+            if (WriteRg != 0)
+                registers[WriteRg] <= RegWrite ? WriteData : registers[WriteRg];
+    end
 
-  #5 read_data_1 = registers[read_address_1];
-     read_data_2 = registers[read_address_2];
-
-end
+    // Leitura combinacional
+    assign ReadData1 = registers[ReadRg1];
+    assign ReadData2 = registers[ReadRg2];
 
 endmodule

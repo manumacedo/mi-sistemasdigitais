@@ -2,8 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity RAM is
     generic(
-        SIZE            : integer := 16384;
-        \FILE\          : string  := "C:/Users/Preton/Documents/github/tec499-pbl01-assembler/algs/primes.mc"
+        SIZE            : integer := 16384
     );
     port(
         Clock           : in     vl_logic;
@@ -14,5 +13,4 @@ entity RAM is
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of SIZE : constant is 1;
-    attribute mti_svvh_generic_type of \FILE\ : constant is 1;
 end RAM;

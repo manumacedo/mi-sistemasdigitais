@@ -66,9 +66,9 @@ module ControlUnitTest ();
 
     initial begin
         Cmp_Eq = 0;
-        
+
         opcode = `Op_R;
-        
+
         funct = `Funct_Add;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
@@ -81,28 +81,28 @@ module ControlUnitTest ();
         funct = `Funct_Mul;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         opcode = `Op_R;
         funct = `Funct_Sll;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         funct = `Funct_Div;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         funct = `Funct_Mfhi;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         funct = `Funct_Slt;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         funct = `Funct_Jr;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         opcode = `Op_Addi;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
@@ -110,41 +110,41 @@ module ControlUnitTest ();
         opcode = `Op_Lui;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         opcode = `Op_Ori;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         opcode = `Op_Beq;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         opcode = `Op_Bne;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         opcode = `Op_J;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         opcode = `Op_Jal;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         opcode = `Op_Lw;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         opcode = `Op_Sw;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         $display("Branch Tests");
         Cmp_Eq = 1;
         opcode = `Op_Beq;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
-        
+
         opcode = `Op_Bne;
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
@@ -160,7 +160,8 @@ module ControlUnitTest ();
         #1;
         checkOutput(opcode,funct,Cmp_Eq,PCSrc,NoDest,ALUCtrl,ALUSrc,RegDst,MemWrite,MemRead,MemtoReg,RegWrite,IF_Flush,SignExt,Branch);
 
-       
+        $display("Pass All Test");
+
         $finish();
     end
 endmodule

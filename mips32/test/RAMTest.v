@@ -30,7 +30,7 @@ module RAMTest ();
         input [31:0] dIn,dOut;
         begin
             $display ("Address: %d  Write: %d",addr,writeEn);
-            $display("DataOut: %d  DataIn: %d\n",dOut,dIn);
+            $display("DataOut: %d  DataIn: %d/n",dOut,dIn);
         end
     endtask
 
@@ -42,7 +42,7 @@ module RAMTest ();
     initial begin
       wr = 1;
 
-      $readmemh("../simulator/bin/addsub.hmc", fileContent);
+      $readmemb("C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/test/RamEx.mc", fileContent);
 
       for (i = 0; i < wordsInFile; i=i+1) begin
         address = i[13:0];
@@ -69,7 +69,7 @@ module RAMTest ();
 
       wr = 1;
       writeData = 32'b111;
-      
+
       #(Cycle);
       printOutput(address,wr,writeData,readData);
 

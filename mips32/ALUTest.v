@@ -62,7 +62,7 @@ module ALUTest ();
     endtask
 
     integer i;
-    localparam loops = 50;
+    localparam loops = 500;
     initial begin
         reset = 0;
         for (i = 0; i < loops; i=i+1) begin

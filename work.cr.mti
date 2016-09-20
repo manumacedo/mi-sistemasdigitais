@@ -1,23 +1,9 @@
-C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EX_Block.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EX_Block.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module EX_Block
-
-Top level modules:
-	EX_Block
-
-} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/test/RAMTest.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/test/RAMTest.v
+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/test/RAMTest.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/test/RAMTest.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module RAMTest
 
 Top level modules:
 	RAMTest
-
-} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/test/ProcessorTest.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/test/ProcessorTest.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ProcessorTest
-
-Top level modules:
-	ProcessorTest
 
 } {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ID_Block.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ID_Block.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -26,12 +12,33 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	ID_Block
 
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EX_Block.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/EX_Block.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module EX_Block
+
+Top level modules:
+	EX_Block
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/test/ProcessorTest.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/test/ProcessorTest.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ProcessorTest
+
+Top level modules:
+	ProcessorTest
+
 } {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Extender.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Extender.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Extender
 
 Top level modules:
 	Extender
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/RAM.v {1 {vlog -work work {C:\Users\Preton\Documents\github\mi-sistemasdigitais\mips32\RAM.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module RAM
+
+Top level modules:
+	RAM
 
 } {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Processor.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Processor.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -54,19 +61,19 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	ADD
 
-} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/MEM_WB_Stage.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/MEM_WB_Stage.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module MEM_WB_Stage
-
-Top level modules:
-	MEM_WB_Stage
-
 } {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUTest.v {1 {vlog -work work +incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUTest.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ALUTest
 
 Top level modules:
 	ALUTest
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/MEM_WB_Stage.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/MEM_WB_Stage.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MEM_WB_Stage
+
+Top level modules:
+	MEM_WB_Stage
 
 } {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUControl.v {1 {vlog -work work +incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ALUControl.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -110,12 +117,14 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	ControlUnitTest
 
-} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Register_Bank.v {0 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Register_Bank.v
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Register_Bank.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Register_Bank.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Register_Bank
-** Error: C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Register_Bank.v(30): Declarations not allowed in unnamed block.
+-- Compiling module register_bank
 
-} {4.0 5.0} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ControlUnit.v {1 {vlog -work work +incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ControlUnit.v
+Top level modules:
+	register_bank
+
+} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ControlUnit.v {1 {vlog -work work +incdir+C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32 C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/ControlUnit.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ControlUnit
 
@@ -170,13 +179,6 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	ID_EX_Stage
-
-} {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/RegisterFile.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/RegisterFile.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module RegisterFile
-
-Top level modules:
-	RegisterFile
 
 } {} {}} C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Register.v {1 {vlog -work work C:/Users/Preton/Documents/github/mi-sistemasdigitais/mips32/Register.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012

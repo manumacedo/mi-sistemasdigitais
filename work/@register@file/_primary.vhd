@@ -1,6 +1,6 @@
 library verilog;
 use verilog.vl_types.all;
-entity RegisterFile is
+entity register_bank is
     port(
         Clock           : in     vl_logic;
         Reset           : in     vl_logic;
@@ -12,4 +12,4 @@ entity RegisterFile is
         ReadData1       : out    vl_logic_vector(31 downto 0);
         ReadData2       : out    vl_logic_vector(31 downto 0)
     );
-end RegisterFile;
+end register_bank;
