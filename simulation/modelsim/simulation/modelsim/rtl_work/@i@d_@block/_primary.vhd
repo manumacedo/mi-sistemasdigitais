@@ -1,0 +1,42 @@
+library verilog;
+use verilog.vl_types.all;
+entity ID_Block is
+    port(
+        Clock           : in     vl_logic;
+        Reset           : in     vl_logic;
+        ID_Instruction  : in     vl_logic_vector(31 downto 0);
+        ID_PCplus4      : in     vl_logic_vector(31 downto 0);
+        WB_WriteData    : in     vl_logic_vector(31 downto 0);
+        MEM_ALUOut      : in     vl_logic_vector(31 downto 0);
+        ForBranchA      : in     vl_logic_vector(1 downto 0);
+        ForBranchB      : in     vl_logic_vector(1 downto 0);
+        HazZero         : in     vl_logic;
+        WB_RegWrite     : in     vl_logic;
+        WB_DestReg      : in     vl_logic_vector(4 downto 0);
+        ID_BranchAddr   : out    vl_logic_vector(31 downto 0);
+        ID_JumpAddr     : out    vl_logic_vector(31 downto 0);
+        ID_JrRsData     : out    vl_logic_vector(31 downto 0);
+        ID_PCSrc        : out    vl_logic_vector(1 downto 0);
+        IF_Flush        : out    vl_logic;
+        Branch          : out    vl_logic;
+        EX_PCplus4      : out    vl_logic_vector(31 downto 0);
+        EX_RsData       : out    vl_logic_vector(31 downto 0);
+        EX_RtData       : out    vl_logic_vector(31 downto 0);
+        EX_Immediate    : out    vl_logic_vector(31 downto 0);
+        EX_RsReg        : out    vl_logic_vector(4 downto 0);
+        EX_RtReg        : out    vl_logic_vector(4 downto 0);
+        EX_RdReg        : out    vl_logic_vector(4 downto 0);
+        EX_RegWrite     : out    vl_logic;
+        EX_MemtoReg     : out    vl_logic;
+        EX_MemRead      : out    vl_logic;
+        EX_MemWrite     : out    vl_logic;
+        EX_ALUSrc       : out    vl_logic;
+        EX_ALUCtrl      : out    vl_logic_vector(2 downto 0);
+        EX_RegDst       : out    vl_logic;
+        EX_NoDest       : out    vl_logic;
+        EX_Instruction  : out    vl_logic_vector(31 downto 0);
+        ID_RsReg        : out    vl_logic_vector(4 downto 0);
+        ID_RtReg        : out    vl_logic_vector(4 downto 0);
+        MemWrite        : out    vl_logic
+    );
+end ID_Block;
