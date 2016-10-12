@@ -1,0 +1,634 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1
+vADD
+Z1 V<jbB?f4bz[DAZm^hh^7_63
+r1
+31
+Z2 I[ATiX1`z=iCF^RBNOe:=M0
+Z3 dC:\altera\13.1\simulation\modelsim
+Z4 w1474338338
+Z5 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v
+Z6 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v
+L0 16
+Z7 OV;L;10.1d;51
+Z8 o-work work -O0
+Z9 n@a@d@d
+Z10 !s100 ^CJOnXFB1hjgo9Ez<`ReJ1
+Z11 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v|
+Z12 !s108 1474510784.821000
+Z13 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vAlgBubbleTb
+Z14 V5IjS>9HUBgbggC9oYoeYa2
+r1
+31
+Z15 ImYkO0=[6XAVa=@B916kB[3
+R3
+Z16 w1474508925
+Z17 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/AlgBubbleTb.v
+Z18 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/AlgBubbleTb.v
+L0 2
+R7
+R8
+Z19 n@alg@bubble@tb
+Z20 !s100 U:jU[m7D_UVn;A0JJecjX1
+Z21 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/AlgBubbleTb.v|
+Z22 !s108 1474510792.732000
+Z23 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/AlgBubbleTb.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vALU
+Z24 Vd@>A3d^3zHn:mW[6<maOa1
+r1
+31
+Z25 IE[`Ta]dK1H3IQ_AHK6bOD1
+R3
+R4
+Z26 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v
+Z27 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v
+L0 27
+R7
+R8
+Z28 !s92 -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 -O0
+Z29 n@a@l@u
+Z30 !s100 BQOSbS`X?Cj8KK<ch5zHB1
+Z31 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v|
+Z32 !s108 1474510785.066000
+Z33 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU_Parameters.vh|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vALUControl
+Z34 VhOTicKZVNnkc9fBT7:Img0
+r1
+31
+Z35 ImmRH?695BDVlR]^`k[l:Y2
+R3
+R4
+Z36 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v
+Z37 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v
+L0 19
+R7
+R8
+R28
+Z38 n@a@l@u@control
+Z39 !s100 lgUg_3Okggl;H_oNzLTV92
+Z40 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v|
+Z41 !s108 1474510785.265000
+Z42 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.vh|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU_Parameters.vh|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vALUTest
+Z43 VMX9l1GYcQ@Q2OWT0lhm:K3
+r1
+31
+Z44 I5@a6Ieonof@:=2W[EVl_60
+R3
+R4
+Z45 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v
+Z46 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v
+Z47 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.v
+Z48 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU_Parameters.v
+L0 3
+R7
+R8
+R28
+Z49 n@a@l@u@test
+Z50 !s100 Uk?IgKcL5`4GaVY]fMPjT2
+Z51 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v|
+Z52 !s108 1474510785.523000
+Z53 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU_Parameters.v|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.v|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALUTest.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vBranchForwardUnit
+Z54 VQVjdh_S998iX[loSZ[b571
+r1
+31
+Z55 IJP7iW15[n[L7We<CCY8R=2
+R3
+R4
+Z56 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/BranchForwardUnit.v
+Z57 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/BranchForwardUnit.v
+L0 20
+R7
+R8
+Z58 n@branch@forward@unit
+Z59 !s100 eGk3k0ZAGke2X:gU4[OmV0
+Z60 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/BranchForwardUnit.v|
+Z61 !s108 1474510785.828000
+Z62 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/BranchForwardUnit.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCompare
+Z63 V>?hEYQF=fz;0elaz1J;hD0
+r1
+31
+Z64 IWa>;iQaQ?Hi04=zl=ie0M2
+R3
+Z65 w1474080520
+Z66 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Compare.v
+Z67 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Compare.v
+L0 3
+R7
+R8
+Z68 n@compare
+Z69 !s100 PY`2k^B;574m4^K`98WfA3
+Z70 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Compare.v|
+Z71 !s108 1474510786.075000
+Z72 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Compare.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vControlUnit
+Z73 VHNi__WEd4T9<nFMeX[KVX0
+r1
+31
+Z74 IH`1:3W_V:WCa3B6GIo2W=1
+R3
+R4
+Z75 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ControlUnit.v
+Z76 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ControlUnit.v
+L0 6
+R7
+R8
+R28
+Z77 n@control@unit
+Z78 !s100 n_6Xb8cQa<Snm38Zed6BI0
+Z79 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ControlUnit.v|
+Z80 !s108 1474510786.509000
+Z81 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Datapath_Parameters.vh|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.vh|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ControlUnit.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vControlUnitTest
+Z82 V=_:Z@=a[CQK;3MhhSL]Od3
+r1
+31
+Z83 IGzMacVSPcSL:C9n4dY]=k1
+R3
+R4
+Z84 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/ControlUnitTest.v
+Z85 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/ControlUnitTest.v
+L0 5
+R7
+R8
+R28
+Z86 n@control@unit@test
+Z87 !s100 goQB<o=>Df21oRmMXjMoc1
+Z88 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/ControlUnitTest.v|
+Z89 !s108 1474510793.261000
+Z90 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Datapath_Parameters.vh|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.vh|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/ControlUnitTest.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vEX_Block
+Z91 VnJm^on;IE>6_NfLLBa6fL3
+r1
+31
+Z92 I=NYPX:ekh[09`hIAFWHJL2
+R3
+R4
+Z93 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_Block.v
+Z94 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_Block.v
+L0 3
+R7
+R8
+Z95 n@e@x_@block
+Z96 !s100 10o<67cAN[o2@cFn4Mdeo2
+Z97 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_Block.v|
+Z98 !s108 1474510786.790000
+Z99 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_Block.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vEX_MEM_Stage
+Z100 Vf<QJ5;@]hfOLIj`VXO;=30
+r1
+31
+Z101 IgYJgQ^4`B4C5iSgbhWg:92
+R3
+R4
+Z102 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_MEM_Stage.v
+Z103 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_MEM_Stage.v
+L0 35
+R7
+R8
+Z104 n@e@x_@m@e@m_@stage
+Z105 !s100 JATcmEO6SN=>J9VWHIWJX3
+Z106 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_MEM_Stage.v|
+Z107 !s108 1474510787.067000
+Z108 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_MEM_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vExtender
+Z109 VkbAAHdG6J5zaW`ITM]GQS1
+r1
+31
+Z110 I`@AEl4mNh:mUAP1WCK_M=3
+R3
+R4
+Z111 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v
+Z112 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v
+L0 8
+R7
+R8
+Z113 n@extender
+Z114 !s100 GdW0nIAWDW_i:n9J^RWfO3
+Z115 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v|
+Z116 !s108 1474510787.361000
+Z117 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vEXTest
+Z118 VUWWALEX0J<3RaWWh:l6Ze3
+r1
+31
+Z119 InEGh5Y<bVIR23jC71EXM62
+R3
+R65
+Z120 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v
+Z121 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v
+R47
+R48
+L0 3
+R7
+R8
+R28
+Z122 n@e@x@test
+Z123 !s100 z?RBHzHgBjRRe2XMH07Ja2
+Z124 !s108 1474511232.246000
+Z125 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU_Parameters.v|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Opcodes_Functs_Parameters.v|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v|
+Z126 !s90 -reportprogress|300|-work|work|+incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32|-O0|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EXTest.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vForwardingUnit
+Z127 VECe58R=GnzM6l_l0?7=KT2
+r1
+31
+Z128 IB]<zZJojS<8G0Db_=6H1I2
+R3
+R4
+Z129 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v
+Z130 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v
+L0 3
+R7
+R8
+Z131 n@forwarding@unit
+Z132 !s100 FnNX1]A1l3>_MWY6I_bd71
+Z133 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v|
+Z134 !s108 1474510788.100000
+Z135 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vHazardDetectionUnit
+Z136 VQ2T@cM5d5^T7dbnYPc;jT0
+r1
+31
+Z137 I[2edZ=bENZkc:]96T5NPG0
+R3
+R4
+Z138 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v
+Z139 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v
+L0 3
+R7
+R8
+Z140 n@hazard@detection@unit
+Z141 !s100 @?Dz0DP>W8UDUGY[Ji8dS0
+Z142 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v|
+Z143 !s108 1474510788.316000
+Z144 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vID_Block
+Z145 VB8Dh@cdCHAm<]c[43TJJT3
+r1
+31
+Z146 IN6P>;4NIzC31`@LQ7T6;Q3
+R3
+R4
+Z147 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_Block.v
+Z148 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_Block.v
+L0 3
+R7
+R8
+Z149 n@i@d_@block
+Z150 !s100 Dmj?L7VzPOmiA7oFPeaYR3
+Z151 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_Block.v|
+Z152 !s108 1474510788.480000
+Z153 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_Block.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vID_EX_Stage
+Z154 VAZ0RV3gT`fJdd9dz9MVSA1
+r1
+31
+Z155 I[OP@JKO;Z`o0?IUhK5UjK3
+R3
+R4
+Z156 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_EX_Stage.v
+Z157 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_EX_Stage.v
+L0 11
+R7
+R8
+Z158 n@i@d_@e@x_@stage
+Z159 !s100 HQF[XAo6UOEJiM3W@Ua3E0
+Z160 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_EX_Stage.v|
+Z161 !s108 1474510788.724000
+Z162 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_EX_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vIF_Block
+Z163 VamP=JVj5:SC=1DA1QUU7;1
+r1
+31
+Z164 IKlzE`PcQ3nHID3dd`lJSe0
+R3
+R4
+Z165 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_Block.v
+Z166 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_Block.v
+L0 3
+R7
+R8
+Z167 n@i@f_@block
+Z168 !s100 W]OjK:]K>4GIEnNhL4WLn0
+Z169 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_Block.v|
+Z170 !s108 1474510789.192000
+Z171 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_Block.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vIF_ID_Stage
+Z172 VdASKh1WSQUm]mbVD0m2a93
+r1
+31
+Z173 IY[JVeK2:09@4oL23I1QW=1
+R3
+R4
+Z174 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_ID_Stage.v
+Z175 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_ID_Stage.v
+L0 11
+R7
+R8
+Z176 n@i@f_@i@d_@stage
+Z177 !s100 P^1KJ@0HoX4;k4RZcHihL1
+Z178 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_ID_Stage.v|
+Z179 !s108 1474510789.386000
+Z180 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_ID_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMEM_Block
+Z181 V>Fh^Fk9m4Vdl^HjmGbO<82
+r1
+31
+Z182 IjQk@39T=2?Yl[Cc1@Z72P1
+R3
+R4
+Z183 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_Block.v
+Z184 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_Block.v
+L0 3
+R7
+R8
+Z185 n@m@e@m_@block
+Z186 !s100 b`R>;<GLM>>8F6oF92@Y33
+Z187 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_Block.v|
+Z188 !s108 1474510789.694000
+Z189 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_Block.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMEM_WB_Stage
+Z190 V^U]U7d8SSiN0;<Jfbe7Q30
+r1
+31
+Z191 ICUl5kkW_nL`0O2V^BBfT^0
+R3
+R4
+Z192 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_WB_Stage.v
+Z193 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_WB_Stage.v
+L0 11
+R7
+R8
+Z194 n@m@e@m_@w@b_@stage
+Z195 !s100 @D;<d<REV[:Xj^g_mY@bW0
+Z196 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_WB_Stage.v|
+Z197 !s108 1474510789.888000
+Z198 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_WB_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMux2
+Z199 VG]S]i?YoXof1IIIa@EY_N1
+r1
+31
+Z200 IH93fleT]SMIfI^TU1I9mQ3
+R3
+R4
+Z201 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v
+Z202 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v
+L0 7
+R7
+R8
+Z203 n@mux2
+Z204 !s100 X`X7b5SjcUK9POSn<gLb`0
+Z205 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v|
+Z206 !s108 1474510790.092000
+Z207 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMux4
+Z208 VVSe;V6V`IoezEHK^_YTVz1
+r1
+31
+Z209 Ig]J[PCEj6FDaSgfj2<DVI1
+R3
+R4
+Z210 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v
+Z211 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v
+L0 7
+R7
+R8
+Z212 n@mux4
+Z213 !s100 =he`N39BNU9k]hhZTV^NN2
+Z214 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v|
+Z215 !s108 1474510790.509000
+Z216 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vProcessor
+Z217 VL?jTPRJ9VY0Ka70cPz^GK3
+r1
+31
+Z218 IedJ9k6dR_Q@eB=acPPI8L3
+R3
+Z219 w1474509659
+Z220 8C:/altera/13.1/simulation/modelsim/simulation/modelsim/Processor.vo
+Z221 FC:/altera/13.1/simulation/modelsim/simulation/modelsim/Processor.vo
+L0 31
+R7
+R8
+Z222 n@processor
+Z223 !s100 I:R6VfZIn>L_RR4Kjk^`M1
+Z224 !s108 1474510793.950000
+Z225 !s107 C:/altera/13.1/simulation/modelsim/simulation/modelsim/Processor.vo|
+Z226 !s90 -reportprogress|300|-work|work|C:/altera/13.1/simulation/modelsim/simulation/modelsim/Processor.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vProcessorTest
+Z227 V1i=C8K`eeLmcCEamU>HaD0
+r1
+31
+Z228 INkI8SQmWHLd2io7:@4zkS3
+R3
+R4
+Z229 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/ProcessorTest.v
+Z230 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/ProcessorTest.v
+L0 3
+R7
+R8
+Z231 n@processor@test
+Z232 !s100 PBbW3MUEm@oAdP3gh1:6O3
+Z233 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/ProcessorTest.v|
+Z234 !s108 1474510793.510000
+Z235 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/ProcessorTest.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRAM
+!i10b 1
+!s100 KL=ZFSen[FegNM72D]I[S1
+Ik]Co9IamBe1hogd<68eBY3
+Z236 V`T4?TO;@fi6eReHooU]Uj1
+R3
+w1474511610
+Z237 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/RAM.v
+Z238 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/RAM.v
+L0 8
+R7
+r1
+!s85 0
+31
+!s108 1474511651.851000
+!s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/RAM.v|
+Z239 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/RAM.v|
+!s101 -O0
+R8
+Z240 n@r@a@m
+vRAMTest
+Z241 IKgNY[ge<Q=NoVf9]GLc`]2
+Z242 V`Sch2;1lIz<Xi7PR@MacY3
+R3
+Z243 w1474511631
+Z244 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/RAMTest.v
+Z245 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/RAMTest.v
+L0 3
+R7
+r1
+31
+Z246 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/RAMTest.v|
+R8
+Z247 n@r@a@m@test
+!i10b 1
+Z248 !s100 `7K1ndK@8a<;d>ZaW3mh?0
+!s85 0
+Z249 !s108 1474511646.693000
+Z250 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/test/RAMTest.v|
+!s101 -O0
+vRegister
+Z251 V18Hzmh1J_l_d13^5ESR]d1
+r1
+31
+Z252 IYF8cA<j9KInbY=Cl1J3Yb0
+R3
+R4
+Z253 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register.v
+Z254 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register.v
+L0 7
+R7
+R8
+Z255 n@register
+Z256 !s100 Xadd2DPZZKPCIJbgZ`V7d3
+Z257 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register.v|
+Z258 !s108 1474510791.483000
+Z259 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vregister_bank
+Z260 V=@WX`d6GDL8MjaIZ`Dg<42
+r1
+31
+Z261 IeEiHFdMde3CDR3zB`?0IT0
+R3
+R4
+Z262 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register_Bank.v
+Z263 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register_Bank.v
+L0 9
+R7
+R8
+Z264 !s100 Qzn<<;aFc9:Nm>9gno7N@0
+Z265 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register_Bank.v|
+Z266 !s108 1474510791.929000
+Z267 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register_Bank.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRegisterFile
+Z268 VA`8[X1MhZi2<GK9Bn^z:M3
+r1
+31
+Z269 IKCRO@ZC<T@0?iG@X8fMU51
+R3
+R4
+Z270 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/RegisterFile.v
+Z271 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/RegisterFile.v
+L0 9
+R7
+R8
+Z272 n@register@file
+Z273 !s100 fB:59]]i^<`MPa7SR6Sob1
+Z274 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/RegisterFile.v|
+Z275 !s108 1474510792.257000
+Z276 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/RegisterFile.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vWB_Block
+Z277 VWWgDzeV0BHInDE`PMKm`N2
+r1
+31
+Z278 I[K0FiH2X9OTDbV`Log>FB3
+R3
+R4
+Z279 8C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/WB_Block.v
+Z280 FC:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/WB_Block.v
+L0 3
+R7
+R8
+Z281 n@w@b_@block
+Z282 !s100 Z0;n0cfHXA`l`Rd06MiW83
+Z283 !s90 -reportprogress|300|-work|work|C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/WB_Block.v|
+Z284 !s108 1474510792.429000
+Z285 !s107 C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/WB_Block.v|
+!i10b 1
+!s85 0
+!s101 -O0

@@ -1,0 +1,42 @@
+library verilog;
+use verilog.vl_types.all;
+entity ID_EX_Stage is
+    port(
+        Clock           : in     vl_logic;
+        Reset           : in     vl_logic;
+        IDEXWrite       : in     vl_logic;
+        ID_Flush        : in     vl_logic;
+        ID_RegWrite     : in     vl_logic;
+        ID_MemtoReg     : in     vl_logic;
+        ID_MemRead      : in     vl_logic;
+        ID_MemWrite     : in     vl_logic;
+        ID_ALUSrc       : in     vl_logic;
+        ID_ALUCtrl      : in     vl_logic_vector(2 downto 0);
+        ID_RegDst       : in     vl_logic;
+        ID_NoDest       : in     vl_logic;
+        ID_PCplus4      : in     vl_logic_vector(31 downto 0);
+        ID_RsData       : in     vl_logic_vector(31 downto 0);
+        ID_RtData       : in     vl_logic_vector(31 downto 0);
+        ID_Immediate    : in     vl_logic_vector(31 downto 0);
+        ID_RsReg        : in     vl_logic_vector(4 downto 0);
+        ID_RtReg        : in     vl_logic_vector(4 downto 0);
+        ID_RdReg        : in     vl_logic_vector(4 downto 0);
+        ID_Instruction  : in     vl_logic_vector(31 downto 0);
+        EX_PCplus4      : out    vl_logic_vector(31 downto 0);
+        EX_RsData       : out    vl_logic_vector(31 downto 0);
+        EX_RtData       : out    vl_logic_vector(31 downto 0);
+        EX_Immediate    : out    vl_logic_vector(31 downto 0);
+        EX_RsReg        : out    vl_logic_vector(4 downto 0);
+        EX_RtReg        : out    vl_logic_vector(4 downto 0);
+        EX_RdReg        : out    vl_logic_vector(4 downto 0);
+        EX_RegWrite     : out    vl_logic;
+        EX_MemtoReg     : out    vl_logic;
+        EX_MemRead      : out    vl_logic;
+        EX_MemWrite     : out    vl_logic;
+        EX_ALUSrc       : out    vl_logic;
+        EX_ALUCtrl      : out    vl_logic_vector(2 downto 0);
+        EX_RegDst       : out    vl_logic;
+        EX_NoDest       : out    vl_logic;
+        EX_Instruction  : out    vl_logic_vector(31 downto 0)
+    );
+end ID_EX_Stage;

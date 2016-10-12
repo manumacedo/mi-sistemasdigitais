@@ -1,0 +1,146 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Processor_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/WB_Block.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module WB_Block
+# 
+# Top level modules:
+# 	WB_Block
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register_Bank.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register_bank
+# 
+# Top level modules:
+# 	register_bank
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Register
+# 
+# Top level modules:
+# 	Register
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Processor.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Mux4
+# 
+# Top level modules:
+# 	Mux4
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Mux2
+# 
+# Top level modules:
+# 	Mux2
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_WB_Stage.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MEM_WB_Stage
+# 
+# Top level modules:
+# 	MEM_WB_Stage
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_Block.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MEM_Block
+# 
+# Top level modules:
+# 	MEM_Block
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_ID_Stage.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module IF_ID_Stage
+# 
+# Top level modules:
+# 	IF_ID_Stage
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_Block.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module IF_Block
+# 
+# Top level modules:
+# 	IF_Block
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_EX_Stage.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ID_EX_Stage
+# 
+# Top level modules:
+# 	ID_EX_Stage
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_Block.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ID_Block
+# 
+# Top level modules:
+# 	ID_Block
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module HazardDetectionUnit
+# 
+# Top level modules:
+# 	HazardDetectionUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ForwardingUnit
+# 
+# Top level modules:
+# 	ForwardingUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Extender
+# 
+# Top level modules:
+# 	Extender
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_MEM_Stage.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module EX_MEM_Stage
+# 
+# Top level modules:
+# 	EX_MEM_Stage
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_Block.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module EX_Block
+# 
+# Top level modules:
+# 	EX_Block
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/BranchForwardUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module BranchForwardUnit
+# 
+# Top level modules:
+# 	BranchForwardUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ADD
+# 
+# Top level modules:
+# 	ADD
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ControlUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+# vlog -vlog01compat -work work +incdir+C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32 {C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# Load canceled

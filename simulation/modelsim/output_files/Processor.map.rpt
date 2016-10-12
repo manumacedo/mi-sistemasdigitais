@@ -1,0 +1,1397 @@
+Analysis & Synthesis report for Processor
+Wed Sep 21 22:59:02 2016
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Registers Added for RAM Pass-Through Logic
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_0|altsyncram_csg1:auto_generated
+ 17. Source assignments for ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_1|altsyncram_csg1:auto_generated
+ 18. Source assignments for ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_2|altsyncram_csg1:auto_generated
+ 19. Parameter Settings for User Entity Instance: IF_Block:ifblock|Mux4:PCSrc_Mux
+ 20. Parameter Settings for User Entity Instance: IF_Block:ifblock|Mux2:IorD_Mux
+ 21. Parameter Settings for User Entity Instance: IF_Block:ifblock|Mux2:ForwardC_Mux
+ 22. Parameter Settings for User Entity Instance: ID_Block:idblock|Mux2:stall_mux
+ 23. Parameter Settings for User Entity Instance: ID_Block:idblock|Mux4:forBranchA_Mux
+ 24. Parameter Settings for User Entity Instance: ID_Block:idblock|Mux4:forBranchB_Mux
+ 25. Parameter Settings for User Entity Instance: EX_Block:exblock|Mux4:forA_Mux
+ 26. Parameter Settings for User Entity Instance: EX_Block:exblock|Mux4:forB_Mux
+ 27. Parameter Settings for User Entity Instance: EX_Block:exblock|Mux2:AluSrc_Mux
+ 28. Parameter Settings for User Entity Instance: EX_Block:exblock|Mux2:aluOut_Mux
+ 29. Parameter Settings for User Entity Instance: EX_Block:exblock|Mux2:RtRd_Mux
+ 30. Parameter Settings for User Entity Instance: EX_Block:exblock|Mux2:link_Mux
+ 31. Parameter Settings for User Entity Instance: EX_Block:exblock|Mux2:destReg_Mux
+ 32. Parameter Settings for User Entity Instance: WB_Block:wbblock|Mux2:MemtoReg_Mux
+ 33. Parameter Settings for Inferred Entity Instance: ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_0
+ 34. Parameter Settings for Inferred Entity Instance: ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_1
+ 35. Parameter Settings for Inferred Entity Instance: ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_2
+ 36. Parameter Settings for Inferred Entity Instance: EX_Block:exblock|ALU:alu|lpm_mult:Mult0
+ 37. Parameter Settings for Inferred Entity Instance: EX_Block:exblock|ALU:alu|lpm_divide:Mod0
+ 38. altsyncram Parameter Settings by Entity Instance
+ 39. lpm_mult Parameter Settings by Entity Instance
+ 40. Port Connectivity Checks: "MEM_Block:memblock|MEM_WB_Stage:MemWb"
+ 41. Port Connectivity Checks: "MEM_Block:memblock"
+ 42. Port Connectivity Checks: "EX_Block:exblock|EX_MEM_Stage:ExMem"
+ 43. Port Connectivity Checks: "EX_Block:exblock|Mux2:link_Mux"
+ 44. Port Connectivity Checks: "EX_Block:exblock"
+ 45. Port Connectivity Checks: "ID_Block:idblock|ID_EX_Stage:IdEx"
+ 46. Port Connectivity Checks: "ID_Block:idblock|Mux2:stall_mux"
+ 47. Port Connectivity Checks: "ID_Block:idblock|ADD:branchAdd"
+ 48. Port Connectivity Checks: "IF_Block:ifblock|ADD:Add_PC_4"
+ 49. Elapsed Time Per Partition
+ 50. Analysis & Synthesis Messages
+ 51. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Sep 21 22:59:02 2016      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; Processor                                  ;
+; Top-level Entity Name              ; Processor                                  ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 3,063                                      ;
+;     Total combinational functions  ; 2,971                                      ;
+;     Dedicated logic registers      ; 560                                        ;
+; Total registers                    ; 560                                        ;
+; Total pins                         ; 99                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 2,976                                      ;
+; Embedded Multiplier 9-bit elements ; 6                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE30F23C7       ;                    ;
+; Top-level entity name                                                      ; Processor          ; Processor          ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                       ;
++-------------------------------------------------------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                                          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                          ; Library ;
++-------------------------------------------------------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/WB_Block.v            ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/WB_Block.v                 ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register_Bank.v       ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register_Bank.v            ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register.v            ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Register.v                 ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Processor.v           ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Processor.v                ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v                ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux4.v                     ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v                ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Mux2.v                     ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_WB_Stage.v        ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_WB_Stage.v             ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_Block.v           ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/MEM_Block.v                ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_ID_Stage.v         ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_ID_Stage.v              ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_Block.v            ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/IF_Block.v                 ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_EX_Stage.v         ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_EX_Stage.v              ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_Block.v            ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ID_Block.v                 ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/HazardDetectionUnit.v      ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v      ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ForwardingUnit.v           ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v            ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Extender.v                 ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_MEM_Stage.v        ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_MEM_Stage.v             ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_Block.v            ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/EX_Block.v                 ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ControlUnit.v         ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ControlUnit.v              ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/BranchForwardUnit.v   ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/BranchForwardUnit.v        ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v          ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALUControl.v               ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v                 ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/ALU.v                      ;         ;
+; ../../../../Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v                 ; yes             ; User Verilog HDL File        ; C:/Users/manue/Documents/GitHub/mi-sistemasdigitais/mips32/Add.v                      ;         ;
+; /users/manue/documents/github/mi-sistemasdigitais/mips32/alu_parameters.vh                ; yes             ; Auto-Found Unspecified File  ; /users/manue/documents/github/mi-sistemasdigitais/mips32/alu_parameters.vh            ;         ;
+; /users/manue/documents/github/mi-sistemasdigitais/mips32/opcodes_functs_parameters.vh     ; yes             ; Auto-Found Unspecified File  ; /users/manue/documents/github/mi-sistemasdigitais/mips32/opcodes_functs_parameters.vh ;         ;
+; /users/manue/documents/github/mi-sistemasdigitais/mips32/datapath_parameters.vh           ; yes             ; Auto-Found Unspecified File  ; /users/manue/documents/github/mi-sistemasdigitais/mips32/datapath_parameters.vh       ;         ;
+; altsyncram.tdf                                                                            ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf                         ;         ;
+; stratix_ram_block.inc                                                                     ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc                  ;         ;
+; lpm_mux.inc                                                                               ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc                            ;         ;
+; lpm_decode.inc                                                                            ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc                         ;         ;
+; aglobal131.inc                                                                            ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                         ;         ;
+; a_rdenreg.inc                                                                             ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc                          ;         ;
+; altrom.inc                                                                                ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc                             ;         ;
+; altram.inc                                                                                ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc                             ;         ;
+; altdpram.inc                                                                              ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc                           ;         ;
+; db/altsyncram_csg1.tdf                                                                    ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/simulation/modelsim/db/altsyncram_csg1.tdf                             ;         ;
+; lpm_mult.tdf                                                                              ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mult.tdf                           ;         ;
+; lpm_add_sub.inc                                                                           ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_add_sub.inc                        ;         ;
+; multcore.inc                                                                              ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/multcore.inc                           ;         ;
+; bypassff.inc                                                                              ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/bypassff.inc                           ;         ;
+; altshift.inc                                                                              ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altshift.inc                           ;         ;
+; db/mult_46t.tdf                                                                           ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/simulation/modelsim/db/mult_46t.tdf                                    ;         ;
+; lpm_divide.tdf                                                                            ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf                         ;         ;
+; abs_divider.inc                                                                           ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc                        ;         ;
+; sign_div_unsign.inc                                                                       ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc                    ;         ;
+; db/lpm_divide_cqo.tdf                                                                     ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/simulation/modelsim/db/lpm_divide_cqo.tdf                              ;         ;
+; db/abs_divider_4dg.tdf                                                                    ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/simulation/modelsim/db/abs_divider_4dg.tdf                             ;         ;
+; db/alt_u_div_6af.tdf                                                                      ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/simulation/modelsim/db/alt_u_div_6af.tdf                               ;         ;
+; db/add_sub_7pc.tdf                                                                        ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/simulation/modelsim/db/add_sub_7pc.tdf                                 ;         ;
+; db/add_sub_8pc.tdf                                                                        ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/simulation/modelsim/db/add_sub_8pc.tdf                                 ;         ;
+; db/lpm_abs_i0a.tdf                                                                        ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/simulation/modelsim/db/lpm_abs_i0a.tdf                                 ;         ;
++-------------------------------------------------------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 3,063       ;
+;                                             ;             ;
+; Total combinational functions               ; 2971        ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 1466        ;
+;     -- 3 input functions                    ; 1061        ;
+;     -- <=2 input functions                  ; 444         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 2238        ;
+;     -- arithmetic mode                      ; 733         ;
+;                                             ;             ;
+; Total registers                             ; 560         ;
+;     -- Dedicated logic registers            ; 560         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 99          ;
+; Total memory bits                           ; 2976        ;
+; Embedded Multiplier 9-bit elements          ; 6           ;
+; Maximum fan-out node                        ; Clock~input ;
+; Maximum fan-out                             ; 653         ;
+; Total fan-out                               ; 12670       ;
+; Average fan-out                             ; 3.31        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                             ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                   ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |Processor                                   ; 2971 (0)          ; 560 (0)      ; 2976        ; 6            ; 0       ; 3         ; 99   ; 0            ; |Processor                                                                                                                                            ; work         ;
+;    |BranchForwardUnit:bfu|                   ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|BranchForwardUnit:bfu                                                                                                                      ; work         ;
+;    |EX_Block:exblock|                        ; 2049 (0)          ; 104 (0)      ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |Processor|EX_Block:exblock                                                                                                                           ; work         ;
+;       |ALU:alu|                              ; 1608 (258)        ; 32 (32)      ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |Processor|EX_Block:exblock|ALU:alu                                                                                                                   ; work         ;
+;          |lpm_divide:Mod0|                   ; 1322 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|ALU:alu|lpm_divide:Mod0                                                                                                   ; work         ;
+;             |lpm_divide_cqo:auto_generated|  ; 1322 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|ALU:alu|lpm_divide:Mod0|lpm_divide_cqo:auto_generated                                                                     ; work         ;
+;                |abs_divider_4dg:divider|     ; 1322 (64)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|ALU:alu|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider                                             ; work         ;
+;                   |alt_u_div_6af:divider|    ; 1152 (1151)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|ALU:alu|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider                       ; work         ;
+;                      |add_sub_8pc:add_sub_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|ALU:alu|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; work         ;
+;                   |lpm_abs_i0a:my_abs_den|   ; 62 (62)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|ALU:alu|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_den                      ; work         ;
+;                   |lpm_abs_i0a:my_abs_num|   ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|ALU:alu|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num                      ; work         ;
+;          |lpm_mult:Mult0|                    ; 28 (0)            ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |Processor|EX_Block:exblock|ALU:alu|lpm_mult:Mult0                                                                                                    ; work         ;
+;             |mult_46t:auto_generated|        ; 28 (28)           ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |Processor|EX_Block:exblock|ALU:alu|lpm_mult:Mult0|mult_46t:auto_generated                                                                            ; work         ;
+;       |ALUControl:aluCtrl|                   ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|ALUControl:aluCtrl                                                                                                        ; work         ;
+;       |EX_MEM_Stage:ExMem|                   ; 259 (259)         ; 72 (72)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|EX_MEM_Stage:ExMem                                                                                                        ; work         ;
+;       |Mux2:AluSrc_Mux|                      ; 50 (50)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|Mux2:AluSrc_Mux                                                                                                           ; work         ;
+;       |Mux2:destReg_Mux|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|Mux2:destReg_Mux                                                                                                          ; work         ;
+;       |Mux4:forA_Mux|                        ; 65 (65)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|Mux4:forA_Mux                                                                                                             ; work         ;
+;       |Mux4:forB_Mux|                        ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|EX_Block:exblock|Mux4:forB_Mux                                                                                                             ; work         ;
+;    |ForwardingUnit:fu|                       ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ForwardingUnit:fu                                                                                                                          ; work         ;
+;    |HazardDetectionUnit:hdu|                 ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|HazardDetectionUnit:hdu                                                                                                                    ; work         ;
+;    |ID_Block:idblock|                        ; 530 (21)          ; 289 (0)      ; 2976        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock                                                                                                                           ; work         ;
+;       |ADD:branchAdd|                        ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|ADD:branchAdd                                                                                                             ; work         ;
+;       |ControlUnit:ctrlu|                    ; 22 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|ControlUnit:ctrlu                                                                                                         ; work         ;
+;       |Extender:ext|                         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|Extender:ext                                                                                                              ; work         ;
+;       |ID_EX_Stage:IdEx|                     ; 132 (132)         ; 132 (132)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|ID_EX_Stage:IdEx                                                                                                          ; work         ;
+;       |Mux2:stall_mux|                       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|Mux2:stall_mux                                                                                                            ; work         ;
+;       |Mux4:forBranchA_Mux|                  ; 70 (70)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|Mux4:forBranchA_Mux                                                                                                       ; work         ;
+;       |Mux4:forBranchB_Mux|                  ; 70 (70)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|Mux4:forBranchB_Mux                                                                                                       ; work         ;
+;       |register_bank:register_bank|          ; 181 (181)         ; 157 (157)    ; 2976        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|register_bank:register_bank                                                                                               ; work         ;
+;          |altsyncram:registers_rtl_0|        ; 0 (0)             ; 0 (0)        ; 992         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_0                                                                    ; work         ;
+;             |altsyncram_csg1:auto_generated| ; 0 (0)             ; 0 (0)        ; 992         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_0|altsyncram_csg1:auto_generated                                     ; work         ;
+;          |altsyncram:registers_rtl_1|        ; 0 (0)             ; 0 (0)        ; 992         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_1                                                                    ; work         ;
+;             |altsyncram_csg1:auto_generated| ; 0 (0)             ; 0 (0)        ; 992         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_1|altsyncram_csg1:auto_generated                                     ; work         ;
+;          |altsyncram:registers_rtl_2|        ; 0 (0)             ; 0 (0)        ; 992         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_2                                                                    ; work         ;
+;             |altsyncram_csg1:auto_generated| ; 0 (0)             ; 0 (0)        ; 992         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_2|altsyncram_csg1:auto_generated                                     ; work         ;
+;    |IF_Block:ifblock|                        ; 235 (0)           ; 96 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|IF_Block:ifblock                                                                                                                           ; work         ;
+;       |ADD:Add_PC_4|                         ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|IF_Block:ifblock|ADD:Add_PC_4                                                                                                              ; work         ;
+;       |IF_ID_Stage:IfId|                     ; 76 (76)           ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|IF_Block:ifblock|IF_ID_Stage:IfId                                                                                                          ; work         ;
+;       |Mux2:ForwardC_Mux|                    ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|IF_Block:ifblock|Mux2:ForwardC_Mux                                                                                                         ; work         ;
+;       |Mux2:IorD_Mux|                        ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|IF_Block:ifblock|Mux2:IorD_Mux                                                                                                             ; work         ;
+;       |Register:PC|                          ; 65 (65)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|IF_Block:ifblock|Register:PC                                                                                                               ; work         ;
+;    |MEM_Block:memblock|                      ; 71 (0)            ; 71 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|MEM_Block:memblock                                                                                                                         ; work         ;
+;       |MEM_WB_Stage:MemWb|                   ; 71 (71)           ; 71 (71)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|MEM_Block:memblock|MEM_WB_Stage:MemWb                                                                                                      ; work         ;
+;    |WB_Block:wbblock|                        ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|WB_Block:wbblock                                                                                                                           ; work         ;
+;       |Mux2:MemtoReg_Mux|                    ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|WB_Block:wbblock|Mux2:MemtoReg_Mux                                                                                                         ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                      ;
++-------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                              ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_0|altsyncram_csg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 31           ; 32           ; 31           ; 992  ; None ;
+; ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_1|altsyncram_csg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 31           ; 32           ; 31           ; 992  ; None ;
+; ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_2|altsyncram_csg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 31           ; 32           ; 31           ; 992  ; None ;
++-------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 3           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 6           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 1           ;
+; Mixed Sign Embedded Multipliers       ; 2           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                             ;
++---------------------------------------------------------------+----------------------------------------------------------------+
+; Register name                                                 ; Reason for Removal                                             ;
++---------------------------------------------------------------+----------------------------------------------------------------+
+; EX_Block:exblock|EX_MEM_Stage:ExMem|MEM_MemtoReg              ; Merged with EX_Block:exblock|EX_MEM_Stage:ExMem|MEM_MemRead    ;
+; ID_Block:idblock|ID_EX_Stage:IdEx|EX_RdReg[4]                 ; Merged with ID_Block:idblock|ID_EX_Stage:IdEx|EX_Immediate[15] ;
+; ID_Block:idblock|ID_EX_Stage:IdEx|EX_RdReg[3]                 ; Merged with ID_Block:idblock|ID_EX_Stage:IdEx|EX_Immediate[14] ;
+; ID_Block:idblock|ID_EX_Stage:IdEx|EX_RdReg[2]                 ; Merged with ID_Block:idblock|ID_EX_Stage:IdEx|EX_Immediate[13] ;
+; ID_Block:idblock|ID_EX_Stage:IdEx|EX_RdReg[1]                 ; Merged with ID_Block:idblock|ID_EX_Stage:IdEx|EX_Immediate[12] ;
+; ID_Block:idblock|ID_EX_Stage:IdEx|EX_RdReg[0]                 ; Merged with ID_Block:idblock|ID_EX_Stage:IdEx|EX_Immediate[11] ;
+; ID_Block:idblock|ID_EX_Stage:IdEx|EX_MemtoReg                 ; Merged with ID_Block:idblock|ID_EX_Stage:IdEx|EX_MemRead       ;
+; ID_Block:idblock|ID_EX_Stage:IdEx|EX_Immediate[17..31]        ; Merged with ID_Block:idblock|ID_EX_Stage:IdEx|EX_Immediate[16] ;
+; ID_Block:idblock|register_bank:register_bank|registers[0][16] ; Stuck at GND due to stuck port clock_enable                    ;
+; Total Number of Removed Registers = 23                        ;                                                                ;
++---------------------------------------------------------------+----------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 560   ;
+; Number of registers using Synchronous Clear  ; 69    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 118   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------+
+; Inverted Register Statistics                                             ;
++----------------------------------------------------------------+---------+
+; Inverted Register                                              ; Fan out ;
++----------------------------------------------------------------+---------+
+; ID_Block:idblock|register_bank:register_bank|registers[29][16] ; 4       ;
+; ID_Block:idblock|register_bank:register_bank|registers[30][16] ; 4       ;
+; Total number of inverted registers = 2                         ;         ;
++----------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                                                                                             ;
++-------------------------------------------------------------------------+--------------------------------------------------------------+
+; Register Name                                                           ; RAM Name                                                     ;
++-------------------------------------------------------------------------+--------------------------------------------------------------+
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[0]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[1]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[2]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[3]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[4]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[5]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[6]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[7]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[8]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[9]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[10] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[11] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[12] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[13] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[14] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[15] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[16] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[17] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[18] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[19] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[20] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[21] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[22] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[23] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[24] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[25] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[26] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[27] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[28] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[29] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[30] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[31] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[32] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[33] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[34] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[35] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[36] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[37] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[38] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[39] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[40] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_0_bypass[41] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_0 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[0]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[1]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[2]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[3]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[4]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[5]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[6]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[7]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[8]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[9]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[10] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[11] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[12] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[13] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[14] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[15] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[16] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[17] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[18] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[19] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[20] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[21] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[22] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[23] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[24] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[25] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[26] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[27] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[28] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[29] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[30] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[31] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[32] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[33] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[34] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[35] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[36] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[37] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[38] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[39] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[40] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_1_bypass[41] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_1 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[0]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[1]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[2]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[3]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[4]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[5]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[6]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[7]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[8]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[9]  ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[10] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[11] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[12] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[13] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[14] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[15] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[16] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[17] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[18] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[19] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[20] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[21] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[22] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[23] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[24] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[25] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[26] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[27] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[28] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[29] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[30] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[31] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[32] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[33] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[34] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[35] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[36] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[37] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[38] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[39] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[40] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
+; ID_Block:idblock|register_bank:register_bank|registers_rtl_2_bypass[41] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ;
++-------------------------------------------------------------------------+--------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                                                      ;
++-----------------------------------------------------------------------------+--------------------------------------------------------------+------+
+; Register Name                                                               ; Megafunction                                                 ; Type ;
++-----------------------------------------------------------------------------+--------------------------------------------------------------+------+
+; ID_Block:idblock|register_bank:register_bank|registers[0..31][0..15,17..31] ; ID_Block:idblock|register_bank:register_bank|registers_rtl_2 ; RAM  ;
++-----------------------------------------------------------------------------+--------------------------------------------------------------+------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Processor|ID_Block:idblock|ID_EX_Stage:IdEx|EX_ALUCtrl[0]        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Processor|EX_Block:exblock|ALU:alu|accumulator[61]               ;
+; 4:1                ; 54 bits   ; 108 LEs       ; 54 LEs               ; 54 LEs                 ; Yes        ; |Processor|IF_Block:ifblock|IF_ID_Stage:IfId|ID_PCplus4[8]        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Processor|IF_Block:ifblock|Register:PC|Out[0]                    ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Processor|IF_Block:ifblock|Register:PC|Out[30]                   ;
+; 6:1                ; 26 bits   ; 104 LEs       ; 78 LEs               ; 26 LEs                 ; Yes        ; |Processor|IF_Block:ifblock|Register:PC|Out[10]                   ;
+; 19:1               ; 14 bits   ; 168 LEs       ; 70 LEs               ; 98 LEs                 ; Yes        ; |Processor|EX_Block:exblock|EX_MEM_Stage:ExMem|MEM_ALUOut[15]     ;
+; 20:1               ; 8 bits    ; 104 LEs       ; 56 LEs               ; 48 LEs                 ; Yes        ; |Processor|EX_Block:exblock|EX_MEM_Stage:ExMem|MEM_ALUOut[23]     ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; Yes        ; |Processor|EX_Block:exblock|EX_MEM_Stage:ExMem|MEM_ALUOut[27]     ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; Yes        ; |Processor|EX_Block:exblock|EX_MEM_Stage:ExMem|MEM_ALUOut[29]     ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |Processor|EX_Block:exblock|EX_MEM_Stage:ExMem|MEM_ALUOut[31]     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Processor|EX_Block:exblock|Mux2:destReg_Mux|Out[2]               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Processor|EX_Block:exblock|Mux4:forB_Mux|Mux26                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Processor|EX_Block:exblock|Mux4:forA_Mux|Mux29                   ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |Processor|ID_Block:idblock|register_bank:register_bank|registers ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Processor|HazardDetectionUnit:hdu|HazZero                        ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |Processor|EX_Block:exblock|ALUControl:aluCtrl|Mux1               ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Processor|IF_Block:ifblock|IF_ID_Stage:IfId|ID_Instruction       ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |Processor|ID_Block:idblock|Mux4:forBranchA_Mux|Mux19             ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |Processor|ID_Block:idblock|Mux4:forBranchB_Mux|Mux24             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_0|altsyncram_csg1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                              ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                               ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_1|altsyncram_csg1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                              ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                               ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_2|altsyncram_csg1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                              ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                               ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IF_Block:ifblock|Mux4:PCSrc_Mux ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; SIZE           ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IF_Block:ifblock|Mux2:IorD_Mux ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; SIZE           ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IF_Block:ifblock|Mux2:ForwardC_Mux ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; SIZE           ; 32    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ID_Block:idblock|Mux2:stall_mux ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; SIZE           ; 10    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ID_Block:idblock|Mux4:forBranchA_Mux ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; SIZE           ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ID_Block:idblock|Mux4:forBranchB_Mux ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; SIZE           ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EX_Block:exblock|Mux4:forA_Mux ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; SIZE           ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EX_Block:exblock|Mux4:forB_Mux ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; SIZE           ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EX_Block:exblock|Mux2:AluSrc_Mux ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; SIZE           ; 32    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EX_Block:exblock|Mux2:aluOut_Mux ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; SIZE           ; 32    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EX_Block:exblock|Mux2:RtRd_Mux ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; SIZE           ; 5     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EX_Block:exblock|Mux2:link_Mux ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; SIZE           ; 5     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EX_Block:exblock|Mux2:destReg_Mux ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; SIZE           ; 5     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_Block:wbblock|Mux2:MemtoReg_Mux ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; SIZE           ; 32    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_0 ;
++------------------------------------+----------------------+--------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                         ;
++------------------------------------+----------------------+--------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                      ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                      ;
+; WIDTH_A                            ; 31                   ; Untyped                                                      ;
+; WIDTHAD_A                          ; 5                    ; Untyped                                                      ;
+; NUMWORDS_A                         ; 32                   ; Untyped                                                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                      ;
+; WIDTH_B                            ; 31                   ; Untyped                                                      ;
+; WIDTHAD_B                          ; 5                    ; Untyped                                                      ;
+; NUMWORDS_B                         ; 32                   ; Untyped                                                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                      ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                      ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                      ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                      ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                      ;
+; CBXI_PARAMETER                     ; altsyncram_csg1      ; Untyped                                                      ;
++------------------------------------+----------------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_1 ;
++------------------------------------+----------------------+--------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                         ;
++------------------------------------+----------------------+--------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                      ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                      ;
+; WIDTH_A                            ; 31                   ; Untyped                                                      ;
+; WIDTHAD_A                          ; 5                    ; Untyped                                                      ;
+; NUMWORDS_A                         ; 32                   ; Untyped                                                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                      ;
+; WIDTH_B                            ; 31                   ; Untyped                                                      ;
+; WIDTHAD_B                          ; 5                    ; Untyped                                                      ;
+; NUMWORDS_B                         ; 32                   ; Untyped                                                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                      ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                      ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                      ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                      ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                      ;
+; CBXI_PARAMETER                     ; altsyncram_csg1      ; Untyped                                                      ;
++------------------------------------+----------------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_2 ;
++------------------------------------+----------------------+--------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                         ;
++------------------------------------+----------------------+--------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                      ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                      ;
+; WIDTH_A                            ; 31                   ; Untyped                                                      ;
+; WIDTHAD_A                          ; 5                    ; Untyped                                                      ;
+; NUMWORDS_A                         ; 32                   ; Untyped                                                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                      ;
+; WIDTH_B                            ; 31                   ; Untyped                                                      ;
+; WIDTHAD_B                          ; 5                    ; Untyped                                                      ;
+; NUMWORDS_B                         ; 32                   ; Untyped                                                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                      ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                      ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                      ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                      ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                      ;
+; CBXI_PARAMETER                     ; altsyncram_csg1      ; Untyped                                                      ;
++------------------------------------+----------------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: EX_Block:exblock|ALU:alu|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+--------------------------+
+; Parameter Name                                 ; Value        ; Type                     ;
++------------------------------------------------+--------------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 32           ; Untyped                  ;
+; LPM_WIDTHB                                     ; 32           ; Untyped                  ;
+; LPM_WIDTHP                                     ; 64           ; Untyped                  ;
+; LPM_WIDTHR                                     ; 64           ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                  ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                  ;
+; LATENCY                                        ; 0            ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                  ;
+; USE_EAB                                        ; OFF          ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                  ;
+; CBXI_PARAMETER                                 ; mult_46t     ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                  ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                  ;
++------------------------------------------------+--------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: EX_Block:exblock|ALU:alu|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                         ;
+; LPM_WIDTHD             ; 32             ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_cqo ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                    ;
++-------------------------------------------+-------------------------------------------------------------------------+
+; Name                                      ; Value                                                                   ;
++-------------------------------------------+-------------------------------------------------------------------------+
+; Number of entity instances                ; 3                                                                       ;
+; Entity Instance                           ; ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                               ;
+;     -- WIDTH_A                            ; 31                                                                      ;
+;     -- NUMWORDS_A                         ; 32                                                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                            ;
+;     -- WIDTH_B                            ; 31                                                                      ;
+;     -- NUMWORDS_B                         ; 32                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                                ;
+; Entity Instance                           ; ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                               ;
+;     -- WIDTH_A                            ; 31                                                                      ;
+;     -- NUMWORDS_A                         ; 32                                                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                            ;
+;     -- WIDTH_B                            ; 31                                                                      ;
+;     -- NUMWORDS_B                         ; 32                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                                ;
+; Entity Instance                           ; ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_2 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                               ;
+;     -- WIDTH_A                            ; 31                                                                      ;
+;     -- NUMWORDS_A                         ; 32                                                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                            ;
+;     -- WIDTH_B                            ; 31                                                                      ;
+;     -- NUMWORDS_B                         ; 32                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                                ;
++-------------------------------------------+-------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                  ;
++---------------------------------------+-----------------------------------------+
+; Name                                  ; Value                                   ;
++---------------------------------------+-----------------------------------------+
+; Number of entity instances            ; 1                                       ;
+; Entity Instance                       ; EX_Block:exblock|ALU:alu|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 32                                      ;
+;     -- LPM_WIDTHB                     ; 32                                      ;
+;     -- LPM_WIDTHP                     ; 64                                      ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                  ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                      ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                      ;
+;     -- USE_EAB                        ; OFF                                     ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                    ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                      ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                      ;
++---------------------------------------+-----------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "MEM_Block:memblock|MEM_WB_Stage:MemWb" ;
++------------+-------+----------+-----------------------------------+
+; Port       ; Type  ; Severity ; Details                           ;
++------------+-------+----------+-----------------------------------+
+; MEMWBWrite ; Input ; Info     ; Stuck at VCC                      ;
+; MEM_Flush  ; Input ; Info     ; Stuck at GND                      ;
++------------+-------+----------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MEM_Block:memblock"                                                                           ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; WB_Instruction ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "EX_Block:exblock|EX_MEM_Stage:ExMem" ;
++------------+-------+----------+---------------------------------+
+; Port       ; Type  ; Severity ; Details                         ;
++------------+-------+----------+---------------------------------+
+; EXMEMWrite ; Input ; Info     ; Stuck at VCC                    ;
+; EX_Flush   ; Input ; Info     ; Stuck at GND                    ;
++------------+-------+----------+---------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "EX_Block:exblock|Mux2:link_Mux" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; In0  ; Input ; Info     ; Stuck at GND                     ;
+; In1  ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "EX_Block:exblock"                                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; ZERO      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; NEGATIVE  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; OVERFLOW  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; UNDERFLOW ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; CARRY     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "ID_Block:idblock|ID_EX_Stage:IdEx" ;
++-----------+-------+----------+--------------------------------+
+; Port      ; Type  ; Severity ; Details                        ;
++-----------+-------+----------+--------------------------------+
+; IDEXWrite ; Input ; Info     ; Stuck at VCC                   ;
+; ID_Flush  ; Input ; Info     ; Stuck at GND                   ;
++-----------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "ID_Block:idblock|Mux2:stall_mux" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; In1  ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ID_Block:idblock|ADD:branchAdd" ;
++---------+-------+----------+-------------------------------+
+; Port    ; Type  ; Severity ; Details                       ;
++---------+-------+----------+-------------------------------+
+; B[1..0] ; Input ; Info     ; Stuck at GND                  ;
++---------+-------+----------+-------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "IF_Block:ifblock|ADD:Add_PC_4" ;
++----------+-------+----------+-----------------------------+
+; Port     ; Type  ; Severity ; Details                     ;
++----------+-------+----------+-----------------------------+
+; B[31..3] ; Input ; Info     ; Stuck at GND                ;
+; B[1..0]  ; Input ; Info     ; Stuck at GND                ;
+; B[2]     ; Input ; Info     ; Stuck at VCC                ;
++----------+-------+----------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:20     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Wed Sep 21 22:58:36 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/wb_block.v
+    Info (12023): Found entity 1: WB_Block
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/registerfile.v
+    Info (12023): Found entity 1: RegisterFile
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/register_bank.v
+    Info (12023): Found entity 1: register_bank
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/register.v
+    Info (12023): Found entity 1: Register
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/ram.v
+    Info (12023): Found entity 1: RAM
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/processor.v
+    Info (12023): Found entity 1: Processor
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/mux4.v
+    Info (12023): Found entity 1: Mux4
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/mux2.v
+    Info (12023): Found entity 1: Mux2
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/mem_wb_stage.v
+    Info (12023): Found entity 1: MEM_WB_Stage
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/mem_block.v
+    Info (12023): Found entity 1: MEM_Block
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/if_id_stage.v
+    Info (12023): Found entity 1: IF_ID_Stage
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/if_block.v
+    Info (12023): Found entity 1: IF_Block
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/id_ex_stage.v
+    Info (12023): Found entity 1: ID_EX_Stage
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/id_block.v
+    Info (12023): Found entity 1: ID_Block
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/hazarddetectionunit.v
+    Info (12023): Found entity 1: HazardDetectionUnit
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/forwardingunit.v
+    Info (12023): Found entity 1: ForwardingUnit
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/extest.v
+    Info (12023): Found entity 1: EXTest
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/extender.v
+    Info (12023): Found entity 1: Extender
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/ex_mem_stage.v
+    Info (12023): Found entity 1: EX_MEM_Stage
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/ex_block.v
+    Info (12023): Found entity 1: EX_Block
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/controlunit.v
+    Info (12023): Found entity 1: ControlUnit
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/compare.v
+    Info (12023): Found entity 1: Compare
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/branchforwardunit.v
+    Info (12023): Found entity 1: BranchForwardUnit
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/alutest.v
+    Info (12023): Found entity 1: ALUTest
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/alucontrol.v
+    Info (12023): Found entity 1: ALUControl
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/alu.v
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file /users/manue/documents/github/mi-sistemasdigitais/mips32/add.v
+    Info (12023): Found entity 1: ADD
+Warning (10236): Verilog HDL Implicit Net warning at EXTest.v(50): created implicit net for "EX_Out"
+Warning (10236): Verilog HDL Implicit Net warning at EXTest.v(81): created implicit net for "ID_EX_RegWrite"
+Warning (10236): Verilog HDL Implicit Net warning at ControlUnit.v(83): created implicit net for "Jump"
+Warning (10236): Verilog HDL Implicit Net warning at ControlUnit.v(85): created implicit net for "JumpReg"
+Critical Warning (10846): Verilog HDL Instantiation warning at EXTest.v(72): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at EXTest.v(80): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at EXTest.v(88): instance has no name
+Info (12127): Elaborating entity "Processor" for the top level hierarchy
+Info (12128): Elaborating entity "IF_Block" for hierarchy "IF_Block:ifblock"
+Info (12128): Elaborating entity "Register" for hierarchy "IF_Block:ifblock|Register:PC"
+Info (12128): Elaborating entity "ADD" for hierarchy "IF_Block:ifblock|ADD:Add_PC_4"
+Info (12128): Elaborating entity "Mux4" for hierarchy "IF_Block:ifblock|Mux4:PCSrc_Mux"
+Info (12128): Elaborating entity "Mux2" for hierarchy "IF_Block:ifblock|Mux2:IorD_Mux"
+Info (12128): Elaborating entity "IF_ID_Stage" for hierarchy "IF_Block:ifblock|IF_ID_Stage:IfId"
+Info (12128): Elaborating entity "ID_Block" for hierarchy "ID_Block:idblock"
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ID_Block:idblock|ControlUnit:ctrlu"
+Info (12128): Elaborating entity "Mux2" for hierarchy "ID_Block:idblock|Mux2:stall_mux"
+Info (12128): Elaborating entity "register_bank" for hierarchy "ID_Block:idblock|register_bank:register_bank"
+Info (12128): Elaborating entity "Extender" for hierarchy "ID_Block:idblock|Extender:ext"
+Info (12128): Elaborating entity "ID_EX_Stage" for hierarchy "ID_Block:idblock|ID_EX_Stage:IdEx"
+Info (12128): Elaborating entity "EX_Block" for hierarchy "EX_Block:exblock"
+Info (12128): Elaborating entity "Mux4" for hierarchy "EX_Block:exblock|Mux4:forA_Mux"
+Info (12128): Elaborating entity "Mux2" for hierarchy "EX_Block:exblock|Mux2:AluSrc_Mux"
+Info (12128): Elaborating entity "Mux2" for hierarchy "EX_Block:exblock|Mux2:RtRd_Mux"
+Info (12128): Elaborating entity "ALUControl" for hierarchy "EX_Block:exblock|ALUControl:aluCtrl"
+Warning (10272): Verilog HDL Case Statement warning at ALUControl.v(45): case item expression covers a value already covered by a previous case item
+Warning (10272): Verilog HDL Case Statement warning at ALUControl.v(46): case item expression covers a value already covered by a previous case item
+Warning (10272): Verilog HDL Case Statement warning at ALUControl.v(47): case item expression covers a value already covered by a previous case item
+Warning (10272): Verilog HDL Case Statement warning at ALUControl.v(48): case item expression covers a value already covered by a previous case item
+Warning (10272): Verilog HDL Case Statement warning at ALUControl.v(49): case item expression covers a value already covered by a previous case item
+Info (12128): Elaborating entity "ALU" for hierarchy "EX_Block:exblock|ALU:alu"
+Warning (10036): Verilog HDL or VHDL warning at ALU.v(46): object "lo" assigned a value but never read
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(62): inferring latch(es) for variable "CARRY", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "CARRY" at ALU.v(62)
+Info (12128): Elaborating entity "EX_MEM_Stage" for hierarchy "EX_Block:exblock|EX_MEM_Stage:ExMem"
+Info (12128): Elaborating entity "MEM_Block" for hierarchy "MEM_Block:memblock"
+Info (12128): Elaborating entity "MEM_WB_Stage" for hierarchy "MEM_Block:memblock|MEM_WB_Stage:MemWb"
+Info (12128): Elaborating entity "WB_Block" for hierarchy "WB_Block:wbblock"
+Info (12128): Elaborating entity "ForwardingUnit" for hierarchy "ForwardingUnit:fu"
+Info (12128): Elaborating entity "BranchForwardUnit" for hierarchy "BranchForwardUnit:bfu"
+Info (12128): Elaborating entity "HazardDetectionUnit" for hierarchy "HazardDetectionUnit:hdu"
+Warning (276020): Inferred RAM node "ID_Block:idblock|register_bank:register_bank|registers_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "ID_Block:idblock|register_bank:register_bank|registers_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "ID_Block:idblock|register_bank:register_bank|registers_rtl_2" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (19000): Inferred 3 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ID_Block:idblock|register_bank:register_bank|registers_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 31
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 31
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ID_Block:idblock|register_bank:register_bank|registers_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 31
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 31
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ID_Block:idblock|register_bank:register_bank|registers_rtl_2" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 31
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 31
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "EX_Block:exblock|ALU:alu|Mult0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "EX_Block:exblock|ALU:alu|Mod0"
+Info (12130): Elaborated megafunction instantiation "ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_0"
+Info (12133): Instantiated megafunction "ID_Block:idblock|register_bank:register_bank|altsyncram:registers_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "31"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "31"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_csg1.tdf
+    Info (12023): Found entity 1: altsyncram_csg1
+Info (12130): Elaborated megafunction instantiation "EX_Block:exblock|ALU:alu|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "EX_Block:exblock|ALU:alu|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "32"
+    Info (12134): Parameter "LPM_WIDTHP" = "64"
+    Info (12134): Parameter "LPM_WIDTHR" = "64"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_46t.tdf
+    Info (12023): Found entity 1: mult_46t
+Info (12130): Elaborated megafunction instantiation "EX_Block:exblock|ALU:alu|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "EX_Block:exblock|ALU:alu|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_cqo.tdf
+    Info (12023): Found entity 1: lpm_divide_cqo
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
+    Info (12023): Found entity 1: abs_divider_4dg
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_6af.tdf
+    Info (12023): Found entity 1: alt_u_div_6af
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_i0a.tdf
+    Info (12023): Found entity 1: lpm_abs_i0a
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following DSP element node(s):
+        Warning (14320): Synthesized away node "EX_Block:exblock|ALU:alu|lpm_mult:Mult0|mult_46t:auto_generated|mac_mult7"
+        Warning (14320): Synthesized away node "EX_Block:exblock|ALU:alu|lpm_mult:Mult0|mult_46t:auto_generated|mac_out8"
+Info (13014): Ignored 146 buffer(s)
+    Info (13016): Ignored 62 CARRY_SUM buffer(s)
+    Info (13019): Ignored 84 SOFT buffer(s)
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/altera/13.1/simulation/modelsim/output_files/Processor.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 3307 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 65 output pins
+    Info (21061): Implemented 3109 logic cells
+    Info (21064): Implemented 93 RAM segments
+    Info (21062): Implemented 6 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 578 megabytes
+    Info: Processing ended: Wed Sep 21 22:59:02 2016
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:22
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/altera/13.1/simulation/modelsim/output_files/Processor.map.smsg.
+
+
