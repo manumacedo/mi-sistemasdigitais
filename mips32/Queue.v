@@ -21,6 +21,7 @@ assign addr_zero = (addr == 0);
 assign Data_Out = shift_register[addr];
 assign OutputValid = (state == EMPTY) ? 0 : 1;
 assign IsFull = addr_full;
+
 always @(posedge Clock) begin
     if (Reset) begin
         state <= EMPTY;
@@ -41,22 +42,22 @@ always @(posedge Clock) begin
 end
 always @(*) begin
     case (state)
-        EMPTY: begin
-            if (InputValid) begin
-                shift_enable <= 1;
-                next_addr <= 0;
-                next_state <= NOT_EMPTY;
+        EMPTY: begin // esta vazio
+            if (InputValid) begin  // se a entrada é valida
+                shift_enable <= 1; //
+                next_addr <= 0;   // o endereço que será colocado o dado
+                next_state <= NOT_EMPTY;  // mudanca de estado para nao vazio
             end
-            else begin
-                shift_enable <= 0;
+            else begin  # caso a entrada ainda não seja valida
+                shift_enable <= 0;   // continuo na mesma
                 next_addr <= 0;
                 next_state <= EMPTY;
             end
         end
-        NOT_EMPTY: begin
-            if (addr_full) begin
-                if (ConsumerBusy) begin  // idle
-                    shift_enable <= 0;
+        NOT_EMPTY: begin  // se não fo r vazia
+            if (addr_full) begin // se não esta cheia
+                if (ConsumerBusy) begin  // idle   # se eu posso consumir
+                    shift_enable <= 0;  //
                     next_addr <= addr;
                     next_state <= NOT_EMPTY;
                 end

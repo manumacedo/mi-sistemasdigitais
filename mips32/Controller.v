@@ -4,7 +4,7 @@ module Controller (
     input Tx_Busy,
     input WriteEnable,
     input [31:0] Data_In,
-    output reg Tx_Start = 0,
+      output reg Tx_Start = 0,
     output reg [7:0] Tx_Data = 0
 );
 reg [31:0] temp_reg = 0;
